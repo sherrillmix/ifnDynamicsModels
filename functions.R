@@ -137,3 +137,7 @@ plotQvoa2<-function(ic50,label,pos,class,study,speed,ylab='IFNa2 IC50 (pg/ml)',m
   }
   return(list(ylim=ylim,pos=pos))
 }
+
+meanCrI<-function(xx)c(mean(xx,na.rm=TRUE),quantile(xx,c(.025,.975),na.rm=TRUE))
+logsumexp<-function(xx)max(xx)+log(sum(exp(xx-max(xx))))
+softmax<-function(xx)exp(xx-logsumexp(xx))

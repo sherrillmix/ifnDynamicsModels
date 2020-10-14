@@ -147,10 +147,7 @@ print(fitB$fit,pars=c('nadirTimeRaw','nadirChangeRaw','expectedIC50','acuteRaw',
 
 
 
-logsumexp<-function(xx)max(xx)+log(sum(exp(xx-max(xx))))
-softmax<-function(xx)exp(xx-logsumexp(xx))
 
-meanCrI<-function(xx)c(mean(xx,na.rm=TRUE),quantile(xx,c(.025,.975),na.rm=TRUE))
 calcPreds<-function(mat,dat,newDat){
   newDat$scaleCd4<-newDat$cd4/100
   newDat$scaleVl<-log(newDat$vl)
