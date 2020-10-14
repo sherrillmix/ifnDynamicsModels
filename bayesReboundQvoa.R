@@ -3,7 +3,8 @@ library(dnar)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 source('functions.R')
-source('rebound/functions.R')
+
+combined<-read.csv('combinedReboundQvoa.csv',stringsAsFactors=FALSE)
 
 stanCode4_withMixture<-'
   data {
@@ -70,9 +71,8 @@ stanCode4_withMixture<-'
 mod4 <- stan_model(model_code = stanCode4_withMixture)
 
 
-source('readReboundData.R')
 if(!exists('fitA_withMix')){
-fitBayes2<-function(model,patient,states,studies,treats,ic50,baseState='Acute',mixState='Post-ATI',chains=50,baseStudy='Other',logFunc=log,stateId=NULL,iter=6000,...){
+fitBayes<-function(model,patient,states,studies,treats,ic50,baseState='Acute',mixState='Post-ATI',chains=50,baseStudy='Other',logFunc=log,stateId=NULL,iter=6000,...){
   patientId<-structure(1:length(unique(patient)),.Names=sort(unique(patient)))
   studyId<-structure(1:length(unique(studies)),.Names=unique(studies[order(studies!=baseStudy)]))
   if(is.null(stateId))stateId=structure(1:length(unique(states)),.Names=unique(states[order(states!=baseState,states==mixState)]))
@@ -94,28 +94,13 @@ fitBayes2<-function(model,patient,states,studies,treats,ic50,baseState='Acute',m
   fit <- sampling(model, data = dat, iter=iter, chains=chains,thin=2,control=list(adapt_delta=.99,max_treedepth=15),...)
   return(list('fit'=fit,pats=patientId,states=stateId,studies=studyId,patientStudy=patientStudy,dat=dat))
 }
-fitA_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNa2),],fitBayes2(mod4,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNa2,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
-fitB_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNb),],fitBayes2(mod4,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNb,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
+fitA_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNa2),],fitBayes(mod4,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNa2,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
+fitB_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNb),],fitBayes(mod4,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNb,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
 alphaAdjust<-exp(mean(as.matrix(fitA_withMix$fit)[,sprintf('studyMeans[%d]',fitA_withMix$studies['Transmission'])]))
 betaAdjust<-exp(mean(as.matrix(fitB_withMix$fit)[,sprintf('studyMeans[%d]',fitB_withMix$studies['Transmission'])]))
-#save(fitA_withMix,fitB_withMix,file='work/mixFits_2020-05-14.Rdat')
-#load('work/mixFits_2020-05-14.Rdat')
-#save(fitA_withMix,fitB_withMix,file='work/mixFitsUpdate_2020-07-20.Rdat')
-
 }
 
-#pdf('test.pdf');plotSummary(fitA_withMix,addAcute=FALSE);plotSummary(fitB_withMix,addAcute=FALSE);dev.off()
 
-
-zz<-as.matrix(fitB_withMix$fit)
-meanCrI<-function(xx)c(quantile(xx,c(.025,.975)),mean(xx))[c(1,3,2)]
-exp(-apply(zz[,grepl('stateMeans\\[4\\]',colnames(zz)),drop=FALSE],2,meanCrI))
-exp(-apply(zz[,'postProp',drop=FALSE]*zz[,'stateMeans[2]']+(1-zz[,'postProp',drop=FALSE])*zz[,'stateMeans[4]'],2,meanCrI))
-exp(-apply(zz[,'preProp',drop=FALSE]*zz[,'stateMeans[2]']+(1-zz[,'preProp',drop=FALSE])*zz[,'stateMeans[4]'],2,meanCrI))
-mean(zz[,'preProp',drop=FALSE]*zz[,'stateMeans[2]']+(1-zz[,'preProp',drop=FALSE])*zz[,'stateMeans[4]']>zz[,'postProp',drop=FALSE]*zz[,'stateMeans[2]']+(1-zz[,'postProp',drop=FALSE])*zz[,'stateMeans[4]'])
-
-
-#ordering<-c('Pre-ATI A06','Post-ATI A06','Pre-ATI A08','Rebound A08','Post-ATI A08','Pre-ATI A09','Rebound A09','Post-ATI A09','Pre-ATI 9201','Rebound 9201','Pre-ATI 9202','Rebound 9202','Pre-ATI 9203','Rebound 9203','Pre-ATI 9207','Rebound 9207','Rebound A08','Rebound S-22','Rebound S-23','Rebound S-30','Rebound 601','Rebound BEAT-004','Rebound BEAT-030','Rebound BEAT-044','Outgrowth B106','Outgrowth B199','Outgrowth MM14','Outgrowth MM15','Outgrowth MM23','Outgrowth MM34','Outgrowth MM40','Outgrowth MM34','Acute','1 Year','Nadir','Last','Acute Recipients','Chronic Donors')
 ordering<-c('Pre-ATI A06','Post-ATI A06','Pre-ATI A08','Rebound A08','Post-ATI A08','Pre-ATI A09','Rebound A09','Post-ATI A09','Pre-ATI 9241','Rebound 9241','Pre-ATI 9242','Rebound 9242','Pre-ATI 9243','Rebound 9243','Pre-ATI 9244','Rebound 9244','Rebound A08','Rebound S22','Rebound S23','Rebound S30','Rebound 601','Rebound 004','Rebound 030','Rebound 044','Outgrowth B106','Outgrowth B199','Outgrowth MM14','Outgrowth MM15','Outgrowth MM23','Outgrowth MM34','Outgrowth MM40','Outgrowth MM34','Acute','Chronic','Acute Recipients','Chronic Donors')
 pos<-structure(1:length(unique(combined$label[!is.na(combined$label)])),.Names=unique(combined$label[!is.na(combined$label)][orderIn(combined$label[!is.na(combined$label)],ordering)]))
 posStudy<-sapply(names(pos),function(xx)combined[combined$label==xx&!is.na(combined$label),'study'][1])
@@ -229,12 +214,7 @@ pdf('out/voaRebound_bayesSummary.pdf',height=6,width=7)
   tmp$betaAdjust<-tmp$ic50_IFNb/ifelse(tmp$study=='Transmission',betaAdjust,1)
   plotFunc(tmp,'alphaAdjust',fitA_withMix,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'))
   plotFunc(tmp,'betaAdjust',fitB_withMix,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),letters=LETTERS[3:4])
-  #remove adjustment based on single IC50 and use bayesian estimated
-  #combined$ic50_IFNb[combo$study=='Transmission']<-combo$beta[combo$study=='Transmission']/6386*2230
-  #plotSummary(fitB,ylab='IFNb IC50 (pg/ml)')
 dev.off()
-file.copy('out/voaRebound_bayesSummary.pdf','out/Fig._4.pdf',overwrite=TRUE)
-#system('pdfjam out/voaRebound_bayesSummary.pdf --nup 1x2 --outfile tmp.pdf;pdfcrop tmp.pdf out/Fig._4.pdf')
 
 
 
@@ -268,5 +248,3 @@ message('Pre vs post prop')
 print(meanCrI(mat[,'preProp']>mat[,'postProp']))
 print(meanCrI(matB[,'preProp']>matB[,'postProp']))
 
-mean(mat[,'preProp',drop=FALSE]*mat[,'stateMeans[2]']+(1-mat[,'preProp',drop=FALSE])*mat[,'stateMeans[4]']>mat[,'postProp',drop=FALSE]*mat[,'stateMeans[2]']+(1-mat[,'postProp',drop=FALSE])*mat[,'stateMeans[4]'])
-mean(matB[,'preProp',drop=FALSE]*matB[,'stateMeans[2]']+(1-matB[,'preProp',drop=FALSE])*matB[,'stateMeans[4]']>matB[,'postProp',drop=FALSE]*matB[,'stateMeans[2]']+(1-matB[,'postProp',drop=FALSE])*matB[,'stateMeans[4]'])

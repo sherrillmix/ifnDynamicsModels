@@ -1,0 +1,586 @@
+pat,class,study,ic50_IFNa2,ic50_IFNb,displayClass,virus,simpleClass,simplePat,label,speed
+MM23,Acute,MM,1.1143,NA,Acute,MM23.01.2A3,Acute,,Acute,Standard
+MM23,Acute,MM,0.9248,NA,Acute,MM23.01.2C2,Acute,,Acute,Standard
+MM23,Acute,MM,0.6348,NA,Acute,MM23.01.11A3,Acute,,Acute,Standard
+MM23,Acute,MM,0.783897697407002,NA,Acute,MM23.01.11A6,Acute,,Acute,Standard
+MM23,Acute,MM,0.7298,NA,Acute,MM23.01.11B5,Acute,,Acute,Standard
+MM23,Acute,MM,0.765414560875347,NA,Acute,MM23.01.11C4,Acute,,Acute,Standard
+MM23,Acute,MM,0.708360395561468,NA,Acute,MM23.01.13A4,Acute,,Acute,Standard
+MM23,Acute,MM,0.6138,17.45829,Acute,MM23.01.13A5,Acute,,Acute,Standard
+MM23,Acute,MM,0.7345,15.16643,Acute,MM23.01.13B3,Acute,,Acute,Standard
+MM23,Acute,MM,1.1894,15.29331,Acute,MM23.01.13C2,Acute,,Acute,Standard
+MM23,Acute,MM,0.8909,14.95454,Acute,MM23.01.13D2,Acute,,Acute,Standard
+MM23,Acute,MM,0.6728,NA,Acute,MM23.01.14D5,Acute,,Acute,Standard
+MM23,Chronic,MM,0.0059,0.01259,Chronic,MM23.08.13C6,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0036,NA,Chronic,MM23.08.21B6,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0028,0.00646,Chronic,MM23.08.21C2,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0029,0.00589,Chronic,MM23.08.22A3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0043,NA,Chronic,MM23.08.22B4,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0022,0.00222,Chronic,MM23.08.22B5,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.003,NA,Chronic,MM23.08.22C6,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0072,NA,Chronic,MM23.11.1A1,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0023,0.0064,Chronic,MM23.11.1A5,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0039,NA,Chronic,MM23.11.1C3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0022,0.00692,Chronic,MM23.11.1D3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0015,0.00425,Chronic,MM23.11.1D4,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0018,0.00821,Chronic,MM23.11.1D6,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.00760394634384,NA,Chronic,MM23.11.2B2,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.006429618962271,NA,Chronic,MM23.11.2B3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0089,NA,Chronic,MM23.11.2C2,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0229,0.0114,Chronic,MM23.12.21B1,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.033,0.02311,Chronic,MM23.12.22A3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0262,0.07304,Chronic,MM23.12.22C1,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0319,0.04086,Chronic,MM23.12.22C6,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.06769615941839,NA,Chronic,MM23.13.1B4,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.052635444331743,0.24618,Chronic,MM23.13.2D1,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.045252845214417,NA,Chronic,MM23.13.21A3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.039669257618463,0.1303,Chronic,MM23.13.21B5,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0519,0.25567,Chronic,MM23.13.21B6,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0379,NA,Chronic,MM23.13.21D4,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0501,NA,Chronic,MM23.13.22B3,Chronic,,Chronic,Standard
+MM23,Chronic,MM,0.0267,0.06414,Chronic,MM23.13.22C5,Chronic,,Chronic,Standard
+MM23,Outgrowth,MM,0.0586,0.09911,Outgrowth,MM23.18.1A1.VOA,Outgrowth,MM23,Outgrowth MM23,Standard
+MM23,Outgrowth,MM,0.0442,0.04602,Outgrowth,MM23.18.2A1.VOA,Outgrowth,MM23,Outgrowth MM23,Standard
+MM33,Acute,MM,0.733688353458061,NA,Acute,MM33.01.1C1,Acute,,Acute,Standard
+MM33,Acute,MM,0.8201,13.4878,Acute,MM33.01.13C1,Acute,,Acute,Standard
+MM33,Acute,MM,0.393901713629174,7.50747,Acute,MM33.01.14C4,Acute,,Acute,Standard
+MM33,Acute,MM,0.743717520299206,9.40631,Acute,MM33.01.16A5,Acute,,Acute,Standard
+MM33,Acute,MM,0.7391,NA,Acute,MM33.01.16C3,Acute,,Acute,Standard
+MM33,Acute,MM,0.581477815569949,NA,Acute,MM33.01.18A5,Acute,,Acute,Standard
+MM33,Acute,MM,0.418626041060616,6.7636,Acute,MM33.01.19C4,Acute,,Acute,Standard
+MM33,Acute,MM,0.2953,NA,Acute,MM33.01.20D1,Acute,,Acute,Standard
+MM33,Chronic,MM,0.0084,0.00575,Chronic,MM33.13.1D3,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.004335896677736,NA,Chronic,MM33.13.1D6,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.004,0.00308,Chronic,MM33.13.2A4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.004956813492557,0.00625,Chronic,MM33.13.2D6,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0029,0.00218,Chronic,MM33.13.11B1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0091,NA,Chronic,MM33.13.11B5,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.003,NA,Chronic,MM33.13.12A4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0033,0.00629,Chronic,MM33.13.1.bulk,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.008507643622061,0.00423,Chronic,MM33.14.11A3,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.005,NA,Chronic,MM33.14.11B1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0041,NA,Chronic,MM33.14.11B4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0042,NA,Chronic,MM33.14.11C6,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0043,0.00761,Chronic,MM33.14.12A2,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.003687817782917,0.00925,Chronic,MM33.14.12A4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.004995998398719,0.00827,Chronic,MM33.14.12C6,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.004,0.01404,Chronic,MM33.14.1A1.bulk,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0026,0.01206,Chronic,MM33.14.1A2.bulk,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0194,0.00548,Chronic,MM33.17.1D2,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0143,0.01705,Chronic,MM33.17.1D6,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.016586741693292,0.01487,Chronic,MM33.17.2A4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.019082452672547,NA,Chronic,MM33.17.2B3,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.027821214926743,0.00701,Chronic,MM33.17.2B4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.017381599466102,NA,Chronic,MM33.17.2B5,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0086,NA,Chronic,MM33.17.2C3,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.028920564220171,0.00275,Chronic,MM33.17.2D4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0081,0.00604,Chronic,MM33.17.2D5,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0311,0.0218,Chronic,MM33.17.1A1.bulk,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0398,0.01883,Chronic,MM33.17.1A2.bulk,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0153,NA,Chronic,MM33.19.1A2,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.018,NA,Chronic,MM33.19.1A4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0174,NA,Chronic,MM33.19.1B1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0108,0.08942,Chronic,MM33.19.1C2,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0266,0.04715,Chronic,MM33.19.2A4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0162,0.02793,Chronic,MM33.19.2B1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0101,0.13256,Chronic,MM33.19.2B5,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0179,NA,Chronic,MM33.19.2C1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0324,NA,Chronic,MM33.19.2D2,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0364,NA,Chronic,MM33.19.3A1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0348,NA,Chronic,MM33.19.3B4,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0238,NA,Chronic,MM33.19.3D2,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0216,NA,Chronic,MM33.19.4A5,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0333,NA,Chronic,MM33.19.4B5,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0463,NA,Chronic,MM33.19.4D1,Chronic,,Chronic,Standard
+MM33,Chronic,MM,0.0288,0.056813555665045,Chronic,MM33.19.1B1.bulk,Chronic,,Chronic,Standard
+MM34,Acute,MM,0.5175,9.67505,Acute,MM34.01.1A5,Acute,,Acute,Standard
+MM34,Acute,MM,0.4248,17.49748,Acute,MM34.01.1B3,Acute,,Acute,Standard
+MM34,Acute,MM,0.4853,NA,Acute,MM34.01.1B6,Acute,,Acute,Standard
+MM34,Acute,MM,1.4847,17.63067,Acute,MM34.01.1C2,Acute,,Acute,Standard
+MM34,Acute,MM,1.0935,NA,Acute,MM34.01.1D1,Acute,,Acute,Standard
+MM34,Acute,MM,0.7248,NA,Acute,MM34.01.2A4,Acute,,Acute,Standard
+MM34,Acute,MM,0.3856,NA,Acute,MM34.01.2B3,Acute,,Acute,Standard
+MM34,Acute,MM,0.9437,18.02537,Acute,MM34.01.2C2,Acute,,Acute,Standard
+MM34,Acute,MM,0.6913,NA,Acute,MM34.01.2D4,Acute,,Acute,Standard
+MM34,Acute,MM,0.8205,NA,Acute,MM34.01.2D5,Acute,,Acute,Standard
+MM34,Chronic,MM,0.0257,0.03498,Chronic,MM34.12.21A1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0124,0.0211,Chronic,MM34.12.21C5,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0302,0.04934,Chronic,MM34.12.21D1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0279,0.02992,Chronic,MM34.12.21D3,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0045,0.00381,Chronic,MM34.13.11A1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0058,NA,Chronic,MM34.13.11A2,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0043,0.001,Chronic,MM34.13.11B1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0172,0.00156,Chronic,MM34.13.11C5,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0024,0.00075,Chronic,MM34.13.11D2,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0066,NA,Chronic,MM34.13.11D5,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.072,NA,Chronic,MM34.14.1A4,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.018,NA,Chronic,MM34.14.1B2,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0618,0.05956,Chronic,MM34.14.1B3,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0361,NA,Chronic,MM34.14.1C6,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0216,0.12409,Chronic,MM34.14.1D4,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.041360851055074,0.326028771736483,Chronic,MM34.14.2A1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,NA,0.05026,Chronic,MM34.14.2B1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0072,0.0043,Chronic,MM34.15.11A1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0077,0.00092,Chronic,MM34.15.11C1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.003531288716602,0.00060827625303,Chronic,MM34.15.11D3,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0165,0.05179,Chronic,MM34.16.11A5,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0479,0.03532,Chronic,MM34.16.11C1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0322,NA,Chronic,MM34.16.11C3,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0257,0.04464,Chronic,MM34.16.11D1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0563,0.01948,Chronic,MM34.16.11D2,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0717,NA,Chronic,MM34.18.1A4,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0877,0.1393,Chronic,MM34.18.1A6,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0983,NA,Chronic,MM34.18.1C5,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.058,0.46557,Chronic,MM34.18.2A4,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.1059,0.49029,Chronic,MM34.18.2A6,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0515,NA,Chronic,MM34.18.2C2,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0731,NA,Chronic,MM34.18.2D1,Chronic,,Chronic,Standard
+MM34,Chronic,MM,0.0619,0.42855,Chronic,MM34.18.2D2,Chronic,,Chronic,Standard
+MM34,Outgrowth,MM,0.059,0.15,Outgrowth,MM34.23.1B2.VOA,Outgrowth,MM34,Outgrowth MM34,Standard
+MM34,Outgrowth,MM,0.0326,0.20403,Outgrowth,MM34.25.3A5.VOA,Outgrowth,MM34,Outgrowth MM34,Standard
+MM34,Outgrowth,MM,0.026,0.16232,Outgrowth,MM34.25.2B5.VOA,Outgrowth,MM34,Outgrowth MM34,Standard
+MM39,Acute,MM,0.584364988684298,14.85658,Acute,MM39.02.1B4,Acute,,Acute,Standard
+MM39,Acute,MM,0.7559401563616,NA,Acute,MM39.02.2A2,Acute,,Acute,Standard
+MM39,Acute,MM,0.700277159416184,NA,Acute,MM39.02.2B5,Acute,,Acute,Standard
+MM39,Acute,MM,0.799097497180413,NA,Acute,MM39.02.13B5,Acute,,Acute,Standard
+MM39,Acute,MM,0.795500911375971,NA,Acute,MM39.02.13C3,Acute,,Acute,Standard
+MM39,Acute,MM,0.631353538043464,9.65879,Acute,MM39.02.13D2,Acute,,Acute,Standard
+MM39,Acute,MM,0.6197,NA,Acute,MM39.02.13D3,Acute,,Acute,Standard
+MM39,Acute,MM,0.730675851523779,NA,Acute,MM39.02.13D6,Acute,,Acute,Standard
+MM39,Acute,MM,0.897473030235449,NA,Acute,MM39.02.14C1,Acute,,Acute,Standard
+MM39,Acute,MM,0.786584992229066,NA,Acute,MM39.02.14C2,Acute,,Acute,Standard
+MM39,Acute,MM,0.767024966999119,17.37097,Acute,MM39.02.14C3,Acute,,Acute,Standard
+MM39,Acute,MM,0.652024539415504,15.71328,Acute,MM39.02.14C5,Acute,,Acute,Standard
+MM39,Acute,MM,0.92855904497237,NA,Acute,MM39.02.14D4,Acute,,Acute,Standard
+MM39,Acute,MM,0.850159138044166,NA,Acute,MM39.02.14D5,Acute,,Acute,Standard
+MM39,Chronic,MM,0.007475961476626,NA,Chronic,MM39.10.11B3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.006864400920692,NA,Chronic,MM39.10.11B4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.006406246951219,NA,Chronic,MM39.10.11D1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.004349712634186,0.14793,Chronic,MM39.10.11D4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0068,NA,Chronic,MM39.10.11D6,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0071,NA,Chronic,MM39.10.12A2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0034,NA,Chronic,MM39.10.12A6,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0074,NA,Chronic,MM39.10.12B5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0036,NA,Chronic,MM39.10.12C3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.004906118628814,0.137428017521901,Chronic,MM39.10.12C4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0078,0.11368,Chronic,MM39.10.12D3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0051,NA,Chronic,MM39.10.12D4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0031,NA,Chronic,MM39.10.14A3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0067,0.07926,Chronic,MM39.10.14B4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0053,NA,Chronic,MM39.10.14C5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.003782856063876,0.213780509635467,Chronic,MM39.10.1C1.bulk,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0077,0.02993,Chronic,MM39.13.1B1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0057,NA,Chronic,MM39.13.11A2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0072,NA,Chronic,MM39.13.11A4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0045,NA,Chronic,MM39.13.11B1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0074,0.00712,Chronic,MM39.13.11B2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0056,0.03098,Chronic,MM39.13.11C3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.01,0.02253,Chronic,MM39.13.11C5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0048,NA,Chronic,MM39.13.11D1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0031,0.02153,Chronic,MM39.13.1C3.bulk,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0421,0.00453,Chronic,MM39.14.1A2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0397,0.00363,Chronic,MM39.14.1A5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0389,NA,Chronic,MM39.14.1B3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0257,NA,Chronic,MM39.14.2A3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.035316568349714,0.006119640512318,Chronic,MM39.14.2B1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0227,0.01978,Chronic,MM39.14.2B5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0217,NA,Chronic,MM39.14.2D4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0091,NA,Chronic,MM39.16.1A4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.024087958493828,0.2003,Chronic,MM39.16.1B2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.016566031082895,0.1207,Chronic,MM39.16.1B4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.016401487075149,0.12342,Chronic,MM39.16.1C4,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.021823152842795,0.19215,Chronic,MM39.16.2A5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.019635681806344,NA,Chronic,MM39.16.2C3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.017903630916661,NA,Chronic,MM39.16.2D2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0682,NA,Chronic,MM39.16.13A2,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0372,0.29121,Chronic,MM39.16.13A5,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0594,0.21552,Chronic,MM39.16.13B1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0204,NA,Chronic,MM39.16.13B3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0229,NA,Chronic,MM39.16.14B3,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0101,0.12331,Chronic,MM39.16.14C1,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.01,0.20541,Chronic,MM39.16.1A1.bulk,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.0407,0.66917,Chronic,MM39.16.1A2.bulk,Chronic,,Chronic,Standard
+MM39,Chronic,MM,0.046,0.34872,Chronic,MM39.16.1A3.bulk,Chronic,,Chronic,Standard
+MM40,Acute,MM,0.712086953959978,5.28724,Acute,MM40.01.1A1,Acute,,Acute,Standard
+MM40,Acute,MM,0.740997813761957,NA,Acute,MM40.01.1A2,Acute,,Acute,Standard
+MM40,Acute,MM,0.735714448682367,NA,Acute,MM40.01.1A4,Acute,,Acute,Standard
+MM40,Acute,MM,0.7215,NA,Acute,MM40.01.1A5,Acute,,Acute,Standard
+MM40,Acute,MM,0.7815,NA,Acute,MM40.01.1A6,Acute,,Acute,Standard
+MM40,Acute,MM,0.722672297794789,5.73797,Acute,MM40.01.1B1,Acute,,Acute,Standard
+MM40,Acute,MM,0.9986,NA,Acute,MM40.01.1B2,Acute,,Acute,Standard
+MM40,Acute,MM,0.6528,NA,Acute,MM40.01.1B3,Acute,,Acute,Standard
+MM40,Acute,MM,0.2329,NA,Acute,MM40.01.1B4,Acute,,Acute,Standard
+MM40,Acute,MM,0.6266,NA,Acute,MM40.01.1B5,Acute,,Acute,Standard
+MM40,Acute,MM,0.5276,NA,Acute,MM40.01.1C6,Acute,,Acute,Standard
+MM40,Acute,MM,0.6519,NA,Acute,MM40.01.1D1,Acute,,Acute,Standard
+MM40,Acute,MM,0.821,NA,Acute,MM40.01.2A4,Acute,,Acute,Standard
+MM40,Acute,MM,0.6786,NA,Acute,MM40.01.2B5,Acute,,Acute,Standard
+MM40,Acute,MM,0.6809,7.36136,Acute,MM40.01.2C2,Acute,,Acute,Standard
+MM40,Acute,MM,0.7215,7.62371,Acute,MM40.01.2D4,Acute,,Acute,Standard
+MM40,Acute,MM,0.7815,NA,Acute,MM40.01.2D5,Acute,,Acute,Standard
+MM40,Acute,MM,0.7324,11.99288,Acute,MM40.01.2A1.bulk,Acute,,Acute,Standard
+MM40,Acute,MM,0.3935,13.19744,Acute,MM40.01.2A2.bulk,Acute,,Acute,Standard
+MM40,Chronic,MM,0.0062,0.00756,Chronic,MM40.12.13A6,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0021,0.01177,Chronic,MM40.12.13C1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.004,NA,Chronic,MM40.12.13D1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.005547972602672,0.00554,Chronic,MM40.12.14C5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.006316644678942,0.00715,Chronic,MM40.12.14D2,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0104,0.01074,Chronic,MM40.12.1A1.bulk,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0033,0.01119,Chronic,MM40.12.1A2.bulk,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.008761278445524,NA,Chronic,MM40.13.11A1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.017019988249115,NA,Chronic,MM40.13.11A5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.008001249902359,NA,Chronic,MM40.13.11B3,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.010698598038996,0.01671,Chronic,MM40.13.11D4,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.00708237248385,0.02451,Chronic,MM40.13.12A1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.005886425061105,0.0087,Chronic,MM40.13.12B2,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.008804544281222,NA,Chronic,MM40.13.12B5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.010183319694481,0.00994,Chronic,MM40.13.12C2,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.006480740698408,NA,Chronic,MM40.13.12C3,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.028106788209859,0.008,Chronic,MM40.13.13D5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.042919925442619,NA,Chronic,MM40.15.1A3,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.032459513243424,NA,Chronic,MM40.15.1A5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.024937336395474,0.03403,Chronic,MM40.15.1B1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0424,NA,Chronic,MM40.15.1B6,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.066949234498984,NA,Chronic,MM40.15.1C1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.042582155887179,NA,Chronic,MM40.15.2A2,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.051295223949214,NA,Chronic,MM40.15.2B1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.024722863911772,NA,Chronic,MM40.15.2B5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.033433516117812,NA,Chronic,MM40.15.2B6,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0087965902485,0.03149,Chronic,MM40.15.2C1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.068535392316671,0.08353,Chronic,MM40.15.2C3,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.042446436835146,NA,Chronic,MM40.15.2D1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.048332183894378,0.03518,Chronic,MM40.15.2D6,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0414,NA,Chronic,MM40.15.13B6,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0431,NA,Chronic,MM40.15.13C1,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0614,0.15943,Chronic,MM40.15.14B3,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.034,NA,Chronic,MM40.15.14C3,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0287,NA,Chronic,MM40.15.14D5,Chronic,,Chronic,Standard
+MM40,Chronic,MM,0.0896,0.27095,Chronic,MM40.15.1.bulk,Chronic,,Chronic,Standard
+MM40,Outgrowth,MM,0.03,0.066,Outgrowth,MM40.18.1C7.VOA,Outgrowth,MM40,Outgrowth MM40,Standard
+MM14,Chronic,MM,0.00411,0.00674,Chronic,MM14.10.2C1.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.00625,0.00121,Chronic,MM14.10.2C2.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.01465,0.05956,Chronic,MM14.12.1A1.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.018984738607629,0.248327443509573,Chronic,MM14.12.1A2.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.00705,0.00615,Chronic,MM14.14.1A1.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.00681,0.00317,Chronic,MM14.14.1A2.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.02753,0.13297,Chronic,MM14.16.1B1.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.031503166507512,0.127712909292679,Chronic,MM14.16.1B2.bulk,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.01052,0.0074,Chronic,MM14.17.1B3.bulk ,Chronic,,Chronic,Standard
+MM14,Chronic,MM,0.011241370023267,0.012413476547688,Chronic,MM14.17.1B4.bulk,Chronic,,Chronic,Standard
+MM14,Outgrowth,MM,0.029,0.067,Outgrowth,MM14.23.1A3.VOA,Outgrowth,MM14,Outgrowth MM14,Standard
+MM15,Acute,MM,0.577114670407883,18.2463311014324,Acute,MM15.02.2B5.bulk,Acute,,Acute,Fast
+MM15,Acute,MM,0.52334,20.37093,Acute,MM15.02.2A2.bulk,Acute,,Acute,Fast
+MM15,Acute,MM,0.58208,25.2913,Acute,MM15.02.2A4.bulk,Acute,,Acute,Fast
+MM15,Chronic,MM,0.15268,3.67602,Chronic,MM15.11.2B4.bulk,Chronic,,Chronic,Fast
+MM15,Chronic,MM,0.246949335897062,9.67718588469809,Chronic,MM15.13.2C1.bulk,Chronic,,Chronic,Fast
+MM15,Chronic,MM,0.22417,9.38546,Chronic,MM15.14.2C3.bulk,Chronic,,Chronic,Fast
+MM15,Outgrowth,MM,0.332,11.236,Outgrowth,MM15.16.1B2.VOA,Outgrowth,MM15,Outgrowth MM15,Fast
+MM55,Chronic,MM,0.00796,0.07364,Chronic,MM55.09.2A1.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.00217,0.00738,Chronic,MM55.11.2A3.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.005050474353377,0.029487944912565,Chronic,MM55.12.2B1.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.00658,0.01071,Chronic,MM55.12.2B2.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.00345,0.01042,Chronic,MM55.14.1B4.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.0032,0.01025,Chronic,MM55.14.2B5.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.007213632926619,0.008692260925674,Chronic,MM55.15.1A3.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.00528,0.04654,Chronic,MM55.15.1A4.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.00581,0.00573,Chronic,MM55.16.1C2.bulk,Chronic,,Chronic,Slow
+MM55,Chronic,MM,0.00669,0.00373,Chronic,MM55.16.1E1.bulk,Chronic,,Chronic,Slow
+MM62,Acute,MM,0.20018948457728,1.72336623081947,Acute,MM62.01.1A3.bulk,Acute,,Acute,Slow
+MM62,Acute,MM,0.15959,1.61442,Acute,MM62.01.1C4.bulk,Acute,,Acute,Slow
+MM62,Acute,MM,0.25982,1.80835,Acute,MM62.01.2C6.bulk,Acute,,Acute,Slow
+MM62,Chronic,MM,0.00602,0.00684,Chronic,MM62.06.1C3.bulk,Chronic,,Chronic,Slow
+MM62,Chronic,MM,0.00867,0.01094,Chronic,MM62.08.2A1.bulk,Chronic,,Chronic,Slow
+MM62,Chronic,MM,0.01151,0.02232,Chronic,MM62.10.1D6.bulk,Chronic,,Chronic,Slow
+MM62,Chronic,MM,0.01407,0.01768,Chronic,MM62.10.1G6.bulk,Chronic,,Chronic,Slow
+MM62,Chronic,MM,0.01019,0.01595,Chronic,MM62.11.2B5.bulk,Chronic,,Chronic,Slow
+MM62,Chronic,MM,0.01462,0.02224,Chronic,MM62.11.2A2.bulk,Chronic,,Chronic,Slow
+WEAU,Acute,MM,0.84309,19.8733,Acute,WEAU.02.1A1.bulk,Acute,,Acute,Fast
+WEAU,Acute,MM,0.85441,20.64561,Acute,WEAU.02.1A2.bulk,Acute,,Acute,Fast
+WEAU,Acute,MM,1.00554,18.57968,Acute,WEAU.03.1A4.bulk,Acute,,Acute,Fast
+WEAU,Acute,MM,0.9719,17.45945,Acute,WEAU.03.1A5.bulk,Acute,,Acute,Fast
+WEAU,Acute,MM,0.30176,9.33642,Acute,WEAU.08.1B1.bulk,Acute,,Acute,Fast
+WEAU,Acute,MM,0.2975,8.52963,Acute,WEAU.08.1B2.bulk,Acute,,Acute,Fast
+WEAU,Chronic,MM,0.15099604299451,7.13897807997755,Chronic,WEAU.14.1C1.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.30219,4.07269,Chronic,WEAU.14.1C3.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.26581,8.09979,Chronic,WEAU.15.1C4.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.3333,8.75842,Chronic,WEAU.15.1C5.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.29765,11.09965,Chronic,WEAU.17.1D1.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.35274,7.27922,Chronic,WEAU.17.1D2.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.24066,6.07957,Chronic,WEAU.18.1D4.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.43089,8.21134,Chronic,WEAU.18.1D5.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.46627,11.9057,Chronic,WEAU.19.1A1.bulk,Chronic,,Chronic,Fast
+WEAU,Chronic,MM,0.53339,11.22744,Chronic,WEAU.19.1A3.bulk,Chronic,,Chronic,Fast
+B199,Outgrowth,RESERVOIR,0.035,0.12,Outgrowth,B199.2.C.BF.1,Outgrowth,B199,Outgrowth B199,Other
+B106,Outgrowth,RESERVOIR,0.181,3.12,Outgrowth,B106.1.C.3.89,Outgrowth,B106,Outgrowth B106,Other
+B106,Outgrowth,RESERVOIR,0.163,1.96,Outgrowth,B106.2.C.D6.S89,Outgrowth,B106,Outgrowth B106,Other
+9242,Pre-ATI,3BNC117/10-1074,0.021,0.04,Pre-ATI,9242.QVOA.12F23,Outgrowth,9242,Pre-ATI 9242,Other
+9242,Pre-ATI,3BNC117/10-1074,0.013,0.01,Pre-ATI,9242.QVOA.12M6,Outgrowth,9242,Pre-ATI 9242,Other
+9243,Pre-ATI,3BNC117/10-1074,0.015,0.04,Pre-ATI,9243.QVOA.12Y10,Outgrowth,9243,Pre-ATI 9243,Other
+9244,Pre-ATI,3BNC117/10-1074,0.016,0.04,Pre-ATI,9244.QVOA.12I10,Outgrowth,9244,Pre-ATI 9244,Other
+9244,Pre-ATI,3BNC117/10-1074,0.023,0.09,Pre-ATI,9244.QVOA.12J17,Outgrowth,9244,Pre-ATI 9244,Other
+9244,Pre-ATI,3BNC117/10-1074,0.013,0.1,Pre-ATI,9244.QVOA.G12,Outgrowth,9244,Pre-ATI 9244,Other
+9244,Pre-ATI,3BNC117/10-1074,0.021,0.06,Pre-ATI,9244.QVOA.H1,Outgrowth,9244,Pre-ATI 9244,Other
+9244,Pre-ATI,3BNC117/10-1074,0.022,0.15,Pre-ATI,9244.QVOA.K2,Outgrowth,9244,Pre-ATI 9244,Other
+9244,Pre-ATI,3BNC117/10-1074,0.019,0.11,Pre-ATI,9244.QVOA.P11,Outgrowth,9244,Pre-ATI 9244,Other
+9241,Pre-ATI,3BNC117/10-1074,0.029,0.25,Pre-ATI,9241.QVOA.12AU7,Outgrowth,9241,Pre-ATI 9241,Other
+9241,Pre-ATI,3BNC117/10-1074,0.019,0.09,Pre-ATI,9241.QVOA.D2,Outgrowth,9241,Pre-ATI 9241,Other
+9241,Pre-ATI,3BNC117/10-1074,0.037,0.13,Pre-ATI,9241.QVOA.A10,Outgrowth,9241,Pre-ATI 9241,Other
+9241,Pre-ATI,3BNC117/10-1074,0.039,0.09,Pre-ATI,9241.QVOA.C19,Outgrowth,9241,Pre-ATI 9241,Other
+9241,Pre-ATI,3BNC117/10-1074,0.039,0.1,Pre-ATI,9241.QVOA.C8,Outgrowth,9241,Pre-ATI 9241,Other
+9242,Rebound,3BNC117/10-1074,1.134,45.04,Rebound,9242.REB.6B8,Rebound,9242,Rebound 9242,Other
+9242,Rebound,3BNC117/10-1074,1.051,21.99,Rebound,9242.REB.6A710,Rebound,9242,Rebound 9242,Other
+9242,Rebound,3BNC117/10-1074,1.93,30.49,Rebound,9242.REB.6B210,Rebound,9242,Rebound 9242,Other
+9242,Rebound,3BNC117/10-1074,1.263,61.88,Rebound,9242.REB.13B110,Rebound,9242,Rebound 9242,Other
+9242,Rebound,3BNC117/10-1074,1.699,58.24,Rebound,9242.REB.13B810,Rebound,9242,Rebound 9242,Other
+9243,Rebound,3BNC117/10-1074,1.562,49.26,Rebound,9243.REB.13F7,Rebound,9243,Rebound 9243,Other
+9244,Rebound,3BNC117/10-1074,1.532,54.25,Rebound,9244.REB.7A8,Rebound,9244,Rebound 9244,Other
+9244,Rebound,3BNC117/10-1074,1.591,31.67,Rebound,9244.REB.7A1,Rebound,9244,Rebound 9244,Other
+9244,Rebound,3BNC117/10-1074,1.715,34.43,Rebound,9244.REB.7C1,Rebound,9244,Rebound 9244,Other
+9244,Rebound,3BNC117/10-1074,1.353,48.06,Rebound,9244.REB.9D3,Rebound,9244,Rebound 9244,Other
+9244,Rebound,3BNC117/10-1074,1.699,77.03,Rebound,9244.REB.9E6,Rebound,9244,Rebound 9244,Other
+9241,Rebound,3BNC117/10-1074,1.617,82.64,Rebound,9241.REB.7D4,Rebound,9241,Rebound 9241,Other
+A06,Pre-ATI,VRC01,0.145,1.7,Pre-ATI,A06.QVOA.M5,Outgrowth,A06,Pre-ATI A06,Other
+A06,Pre-ATI,VRC01,0.114,1.57,Pre-ATI,A06.QVOA.M10,Outgrowth,A06,Pre-ATI A06,Other
+A06,Pre-ATI,VRC01,0.09,1.81,Pre-ATI,A06.QVOA.M30,Outgrowth,A06,Pre-ATI A06,Other
+A06,Pre-ATI,VRC01,0.085,1.17,Pre-ATI,A06.QVOA.M28,Outgrowth,A06,Pre-ATI A06,Other
+A06,Pre-ATI,VRC01,0.075,1.4,Pre-ATI,A06.QVOA.M19,Outgrowth,A06,Pre-ATI A06,Other
+A06,Pre-ATI,VRC01,0.071,2.99,Pre-ATI,A06.QVOA.M29,Outgrowth,A06,Pre-ATI A06,Other
+A06,Post-ATI,VRC01,0.069,0.85,Post-ATI,A06.QVOA.2B,Post-ATI,A06,Post-ATI A06,Other
+A06,Post-ATI,VRC01,0.087,1.67,Post-ATI,A06.QVOA.M20,Post-ATI,A06,Post-ATI A06,Other
+A06,Post-ATI,VRC01,0.09,1.1,Post-ATI,A06.QVOA.M3,Post-ATI,A06,Post-ATI A06,Other
+A08,Pre-ATI,VRC01,0.042,0.319,Pre-ATI,A08.QVOA.1E2,Outgrowth,A08,Pre-ATI A08,Other
+A08,Pre-ATI,VRC01,0.019,0.01,Pre-ATI,A08.QVOA.M1,Outgrowth,A08,Pre-ATI A08,Other
+A08,Pre-ATI,VRC01,0.011,0.04,Pre-ATI,A08.QVOA.M4,Outgrowth,A08,Pre-ATI A08,Other
+A08,Pre-ATI,VRC01,0.011,0.1,Pre-ATI,A08.QVOA.M5,Outgrowth,A08,Pre-ATI A08,Other
+A08,Post-ATI,VRC01,0.01,0.6,Post-ATI,A08.QVOA.M17,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.013,0.08,Post-ATI,A08.QVOA.M20,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.034,0.895,Post-ATI,A08.QVOA.1B5,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.028,0.084,Post-ATI,A08.QVOA.1C8,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.026,0.073,Post-ATI,A08.QVOA.1F8,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,1.465,5.173,Post-ATI,A08.QVOA.3D8,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.024,0.148,Post-ATI,A08.QVOA.4A1,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.024,0.088,Post-ATI,A08.QVOA.4E4,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.029,0.386,Post-ATI,A08.QVOA.5C3,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.025,0.032,Post-ATI,A08.QVOA.5E2,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.04,0.488,Post-ATI,A08.QVOA.5E4,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.026,0.041,Post-ATI,A08.QVOA.6D3,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.024,0.079,Post-ATI,A08.QVOA.6E2,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,1.227,8.239,Post-ATI,A08.QVOA.6F6,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.035,0.135,Post-ATI,A08.QVOA.7F8,Post-ATI,A08,Post-ATI A08,Other
+A08,Post-ATI,VRC01,0.035,0.032,Post-ATI,A08.QVOA.8E8,Post-ATI,A08,Post-ATI A08,Other
+A08,Rebound,VRC01,1.064,83.13,Rebound,A08.REB.1A3,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.453,51.37,Rebound,A08.REB.1D1,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.222,80.621,Rebound,A08.REB.5C2,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.442,45.436,Rebound,A08.REB.5D2,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,0.854,55.84,Rebound,A08.REB.6B3,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.22,46.83,Rebound,A08.REB.6D6,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.511,75.85,Rebound,A08.REB.7A3,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.426,68.057,Rebound,A08.REB.7C1,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,2.075,44.854,Rebound,A08.REB.7C2,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.649,38.78,Rebound,A08.REB.7D3,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.587,41.982,Rebound,A08.REB.8A5,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.605,41.167,Rebound,A08.REB.8B3,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.328,31.239,Rebound,A08.REB.8D1,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,2.281,64.488,Rebound,A08.REB.6B5,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.94,69.776,Rebound,A08.REB.8B5,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,3.006,92.25,Rebound,A08.REB.2F4,Rebound,A08,Rebound A08,Other
+A08,Rebound,VRC01,1.685,42.34,Rebound,A08.REB.1A5,Rebound,A08,Rebound A08,Other
+A09,Pre-ATI,VRC01,0.259,1.29,Pre-ATI,A09.QVOA.M25,Outgrowth,A09,Pre-ATI A09,Other
+A09,Pre-ATI,VRC01,0.054,0.19,Pre-ATI,A09.QVOA.M22,Outgrowth,A09,Pre-ATI A09,Other
+A09,Pre-ATI,VRC01,0.049,0.46,Pre-ATI,A09.QVOA.M2,Outgrowth,A09,Pre-ATI A09,Other
+A09,Pre-ATI,VRC01,0.06,0.7,Pre-ATI,A09.QVOA.M6,Outgrowth,A09,Pre-ATI A09,Other
+A09,Post-ATI,VRC01,0.212,0.06,Post-ATI,A09.QVOA.M9,Post-ATI,A09,Post-ATI A09,Other
+A09,Post-ATI,VRC01,0.053,0.69,Post-ATI,A09.QVOA.M16,Post-ATI,A09,Post-ATI A09,Other
+A09,Rebound,VRC01,3.157,58.67,Rebound,A09.REB.1B5,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,2.186,51.2,Rebound,A09.REB.1D5,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,2.794,26.36,Rebound,A09.REB.2B2,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,2.399,46.03,Rebound,A09.REB.1A1,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,1.775,58.57,Rebound,A09.REB.1A3,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,2.483,70.36,Rebound,A09.REB.1A4,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,2.552,61.27,Rebound,A09.REB.1A5,Rebound,A09,Rebound A09,Other
+A09,Rebound,VRC01,2.536,83.45,Rebound,A09.REB.1A2,Rebound,A09,Rebound A09,Other
+S22,Rebound,INTERRUPT,1.641,90.59,Rebound,S22.REB.24C4,Rebound,S22,Rebound S22,Other
+S22,Rebound,INTERRUPT,1.028,61.14,Rebound,S22.REB.1E2,Rebound,S22,Rebound S22,Other
+S22,Rebound,INTERRUPT,1.621,93.32,Rebound,S22.REB.1F5,Rebound,S22,Rebound S22,Other
+S22,Rebound,INTERRUPT,1.448,97.27,Rebound,S22.REB.3A6,Rebound,S22,Rebound S22,Other
+S22,Rebound,INTERRUPT,0.995,75.65,Rebound,S22.REB.3B6,Rebound,S22,Rebound S22,Other
+S23,Rebound,INTERRUPT,1.701,66.56,Rebound,S23.REB.3D1,Rebound,S23,Rebound S23,Other
+S23,Rebound,INTERRUPT,1.252,76.3,Rebound,S23.REB.24A5,Rebound,S23,Rebound S23,Other
+S30,Rebound,INTERRUPT,1.208,84.2,Rebound,S30.REB.8D1,Rebound,S30,Rebound S30,Other
+S30,Rebound,INTERRUPT,2.136,87.2,Rebound,S30.REB.2D1,Rebound,S30,Rebound S30,Other
+S30,Rebound,INTERRUPT,1.536,70.82,Rebound,S30.REB.2D2,Rebound,S30,Rebound S30,Other
+S30,Rebound,INTERRUPT,1.721,72.69,Rebound,S30.REB.7D1,Rebound,S30,Rebound S30,Other
+4,Rebound,IFNa2b treatment,2.58,93.58,Rebound,004.REB.4D4,Rebound,4,Rebound 004,Other
+4,Rebound,IFNa2b treatment,2.535,63.21,Rebound,004.REB.4E6,Rebound,4,Rebound 004,Other
+4,Rebound,IFNa2b treatment,2.645,97.87,Rebound,004.REB.4D1,Rebound,4,Rebound 004,Other
+4,Rebound,IFNa2b treatment,5.55,111.8,Rebound,004.REB.4E3,Rebound,4,Rebound 004,Other
+30,Rebound,IFNa2b treatment,2.992,56.49,Rebound,030.REB.3E1,Rebound,30,Rebound 030,Other
+30,Rebound,IFNa2b treatment,2.837,47.24,Rebound,030.REB.2E1,Rebound,30,Rebound 030,Other
+30,Rebound,IFNa2b treatment,3.482,70.43,Rebound,030.REB.4E1,Rebound,30,Rebound 030,Other
+30,Rebound,IFNa2b treatment,2.841,69.21,Rebound,030.REB.8E1,Rebound,30,Rebound 030,Other
+44,Rebound,IFNa2b treatment,3.415,79.99,Rebound,044.REB.6F1,Rebound,44,Rebound 044,Other
+44,Rebound,IFNa2b treatment,2.749,69.41,Rebound,044.REB.5F1,Rebound,44,Rebound 044,Other
+44,Rebound,IFNa2b treatment,2.804,72.71,Rebound,044.REB.7F1,Rebound,44,Rebound 044,Other
+44,Rebound,IFNa2b treatment,2.478,91.45,Rebound,044.REB.8F1,Rebound,44,Rebound 044,Other
+601,Rebound,3BNC117,2.15,64.85,Rebound,601.REB.4B7,Rebound,601,Rebound 601,Other
+601,Rebound,3BNC117,2.033,33.29,Rebound,601.REB.4C3,Rebound,601,Rebound 601,Other
+601,Rebound,3BNC117,2.171,65.81,Rebound,601.REB.4B410,Rebound,601,Rebound 601,Other
+601,Rebound,3BNC117,1.811,42.24,Rebound,601.REB.4A810,Rebound,601,Rebound 601,Other
+601,Rebound,3BNC117,2.246,60.84,Rebound,601.REB.4A710,Rebound,601,Rebound 601,Other
+601,Rebound,3BNC117,2.018,54.66,Rebound,601.REB.4C110,Rebound,601,Rebound 601,Other
+Donor 6,Donor,Transmission,0.462715860659869,0.000228248410685,Chronic Donors,CH1064.PL.080409.UT.01,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.096174725295447,5.77781523235407E-05,Chronic Donors,CH1064.PL.080409.UT.02,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.154171541449797,0.000202377835111,Chronic Donors,CH1064.PL.080409.UT.03,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.298270616942716,4.04271984635015E-05,Chronic Donors,CH1064.PL.080409.UT.04,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.037297214128852,7.94079698557122E-05,Chronic Donors,CH1064.PL.080409.UT.05,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.036977979176235,2.5918978506063E-05,Chronic Donors,CH1064.PL.080409.UT.06,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.343954291340837,0.000318368304752,Chronic Donors,CH1064.PL.080409.UT.07,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.034819249275814,7.45237521451767E-05,Chronic Donors,CH1064.PL.080409.UT.08,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.482024798420762,0.000784024496297,Chronic Donors,CH1064.PL.080409.UT.09,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.075560590004801,9.98041279230232E-05,Chronic Donors,CH1064.PL.080409.UT.10,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.365092743432102,0.000204245352502,Chronic Donors,CH1064.PL.080409.UT.11,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.157075416684421,0.000127933265419,Chronic Donors,CH1064.PL.080409.UT.12,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.026698222004671,3.38269291180619E-05,Chronic Donors,CH1064.PL.080409.UT.13,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.080308792048322,0.000144230666457,Chronic Donors,CH1064.PL.080409.UT.14,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.280344589619101,0.000222177767541,Chronic Donors,CH1064.PL.080409.UT.15,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.23534035642195,0.000230775948063,Chronic Donors,CH1064.PL.080409.UT.16,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.243856484627175,3.04951531300896E-05,Chronic Donors,CH1064.PL.080409.UT.17,Chronic,,Chronic Donors,Other
+Donor 6,Donor,Transmission,0.234572944453873,7.17921390316493E-05,Chronic Donors,CH1064.PL.080409.UT.18,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.164502381630829,3.06042065871709E-05,Chronic Donors,CH148.PL.191206.UT.1,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.259722742426991,3.80675819132757E-05,Chronic Donors,CH148.PL.191206.UT.2,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.028373280798187,2.60430957174624E-05,Chronic Donors,CH148.PL.191206.UT.3,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.107042151550104,6.83715022243138E-05,Chronic Donors,CH148.PL.191206.UT.4,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.112885644131768,4.5451323300787E-05,Chronic Donors,CH148.PL.191206.UT.5,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.054669292350881,2.59823835140806E-05,Chronic Donors,CH148.PL.191206.UT.6,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.203252730187144,0.000214246810576,Chronic Donors,CH148.PL.191206.UT.7,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.102173520568599,0.000303000646986,Chronic Donors,CH148.PL.191206.UT.8,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.019774572938034,2.64355886377221E-05,Chronic Donors,CH148.PL.191206.UT.9,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.351348687519542,0.000208587337168,Chronic Donors,CH148.PL.191206.UT.10,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.021308951623638,2.59042384899382E-05,Chronic Donors,CH148.PL.191206.UT.11,Chronic,,Chronic Donors,Other
+Donor 4,Donor,Transmission,0.036346503061301,2.59042384899382E-05,Chronic Donors,CH148.PL.191206.UT.12,Chronic,,Chronic Donors,Other
+Recipient 5,Recipient,Transmission,0.941494055554509,0.002467652825872,Acute Recipients,CH162.PL.071307.UT.1,Acute,,Acute Recipients,Other
+Recipient 5,Recipient,Transmission,0.835308677281484,0.002516074728028,Acute Recipients,CH162.PL.071307.UT.2,Acute,,Acute Recipients,Other
+Recipient 5,Recipient,Transmission,0.85853783369341,0.00241114779755,Acute Recipients,CH162.PL.071307.UT.3,Acute,,Acute Recipients,Other
+Recipient 5,Recipient,Transmission,0.858531115868154,0.002389417002242,Acute Recipients,CH162.PL.071307.UT.4,Acute,,Acute Recipients,Other
+Recipient 5,Recipient,Transmission,0.846924685361128,0.002204873502354,Acute Recipients,CH162.PL.071307.UT.5,Acute,,Acute Recipients,Other
+Donor 5,Donor,Transmission,0.27127712961485,7.32060760247837E-05,Chronic Donors,CH212.PL.010807.UT.1,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.055330189677634,3.87922776661672E-05,Chronic Donors,CH212.PL.010807.UT.2,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.164265674789726,7.32580385443744E-05,Chronic Donors,CH212.PL.010807.UT.3,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.027132748282745,2.88863377751476E-05,Chronic Donors,CH212.PL.010807.UT.4,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.400676739757649,4.79949337378095E-05,Chronic Donors,CH212.PL.010807.UT.5,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.221315107801512,0.00022025008827,Chronic Donors,CH212.PL.010807.UT.6,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.215661603595729,0.000226334847854,Chronic Donors,CH212.PL.010807.UT.7,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.062250867163226,7.45067098809179E-05,Chronic Donors,CH212.PL.010807.UT.8,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.181134245068033,0.000401053900218,Chronic Donors,CH212.PL.010807.UT.9,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.145238227568861,0.000217931128039,Chronic Donors,CH212.PL.010807.UT.10,Chronic,,Chronic Donors,Other
+Donor 5,Donor,Transmission,0.322730673250134,7.41287690791724E-05,Chronic Donors,CH212.PL.010807.UT.11,Chronic,,Chronic Donors,Other
+Recipient 7,Recipient,Transmission,0.76404157804731,0.002371811046225,Acute Recipients,CH302.PL.041608.UT.1,Acute,,Acute Recipients,Other
+Recipient 7,Recipient,Transmission,0.817181472158204,0.002157725070741,Acute Recipients,CH302.PL.041608.UT.2,Acute,,Acute Recipients,Other
+Recipient 7,Recipient,Transmission,0.867348976577751,0.002123863074779,Acute Recipients,CH302.PL.041608.UT.3,Acute,,Acute Recipients,Other
+Recipient 7,Recipient,Transmission,0.889459627854921,0.002164411310231,Acute Recipients,CH302.PL.041608.UT.4,Acute,,Acute Recipients,Other
+Recipient 7,Recipient,Transmission,0.850550642860412,0.002279141923699,Acute Recipients,CH302.PL.041608.UT.5,Acute,,Acute Recipients,Other
+Recipient 7,Recipient,Transmission,0.864626280275685,0.002339172277052,Acute Recipients,CH302.PL.041608.UT.6,Acute,,Acute Recipients,Other
+Recipient 7,Recipient,Transmission,0.879167326846481,0.002286377084955,Acute Recipients,CH302.PL.041608.UT.7,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.519299007937632,0.002748273358802,Acute Recipients,CH378.PL.080508.UT.1,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.869013560441048,0.00299247206694,Acute Recipients,CH378.PL.080508.UT.2,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.745357938680689,0.002411011045993,Acute Recipients,CH378.PL.080508.UT.3,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.891119817715752,0.002879530004413,Acute Recipients,CH378.PL.080508.UT.4,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.673183139273914,0.002367825598411,Acute Recipients,CH378.PL.080508.UT.5,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.606735394465999,0.002256927141551,Acute Recipients,CH378.PL.080508.UT.6,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.875541403558736,0.00284324744303,Acute Recipients,CH378.PL.080508.UT.7,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.757057027017224,0.002827545008588,Acute Recipients,CH378.PL.080508.UT.8,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.682181353229346,0.002316342069991,Acute Recipients,CH378.PL.080508.UT.9,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.858937796202486,0.002883198949023,Acute Recipients,CH378.PL.080508.UT.10,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.690842441894314,0.002186816545417,Acute Recipients,CH378.PL.080508.UT.11,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.825163060978477,0.002859146153022,Acute Recipients,CH378.PL.080508.UT.12,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.872038179112441,0.002850511243395,Acute Recipients,CH378.PL.080508.UT.13,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.881853748113728,0.002863807688201,Acute Recipients,CH378.PL.080508.UT.14,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.684671171961969,0.002204300553981,Acute Recipients,CH378.PL.080508.UT.15,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.750926069767996,0.002846483024052,Acute Recipients,CH378.PL.080508.UT.16,Acute,,Acute Recipients,Other
+Recipient 3-1,Recipient,Transmission,0.903181068932794,0.002877235994814,Acute Recipients,CH378.PL.080508.UT.17,Acute,,Acute Recipients,Other
+Recipient 4,Recipient,Transmission,1.04834832630812,0.002370670090313,Acute Recipients,CH40.PL.072706.UT.1,Acute,,Acute Recipients,Other
+Recipient 4,Recipient,Transmission,0.913808083137919,0.002502047369325,Acute Recipients,CH40.PL.072706.UT.2,Acute,,Acute Recipients,Other
+Recipient 4,Recipient,Transmission,0.773232538449374,0.002522468828014,Acute Recipients,CH40.PL.072706.UT.3,Acute,,Acute Recipients,Other
+Recipient 4,Recipient,Transmission,0.852235284984491,0.002423319212542,Acute Recipients,CH40.PL.072706.UT.4,Acute,,Acute Recipients,Other
+Recipient 4,Recipient,Transmission,0.989245279147699,0.00260878897752,Acute Recipients,CH40.PL.072706.UT.5,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.841443626105486,0.002639279496697,Acute Recipients,CH427.PL.011608.UT.1,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.882874312234636,0.002565138720202,Acute Recipients,CH427.PL.011608.UT.2,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,1.00523982091653,0.00267253614526,Acute Recipients,CH427.PL.011608.UT.3,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.877529459306139,0.00261700896065,Acute Recipients,CH427.PL.011608.UT.4,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.995717103805281,0.002670638260945,Acute Recipients,CH427.PL.011608.UT.5,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.899407512182508,0.002739538555758,Acute Recipients,CH427.PL.011608.UT.6,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.988619666182372,0.002750644691368,Acute Recipients,CH427.PL.011608.UT.7,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.961251430671788,0.002673246019206,Acute Recipients,CH427.PL.011608.UT.8,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.85933493980506,0.002530998761223,Acute Recipients,CH427.PL.011608.UT.9,Acute,,Acute Recipients,Other
+Recipient 1,Recipient,Transmission,0.772915492025206,0.002528529100893,Acute Recipients,CH427.PL.011608.UT.10,Acute,,Acute Recipients,Other
+Recipient 2,Recipient,Transmission,0.738337689879257,0.001972018374229,Acute Recipients,CH455.PL.012908.UT.1,Acute,,Acute Recipients,Other
+Recipient 2,Recipient,Transmission,0.742718779721138,0.002596452466618,Acute Recipients,CH455.PL.012908.UT.2,Acute,,Acute Recipients,Other
+Recipient 2,Recipient,Transmission,0.742022336204099,0.003639045055999,Acute Recipients,CH455.PL.012908.UT.3,Acute,,Acute Recipients,Other
+Recipient 2,Recipient,Transmission,0.864212278531028,0.002120000744013,Acute Recipients,CH455.PL.012908.UT.4,Acute,,Acute Recipients,Other
+Recipient 2,Recipient,Transmission,0.829195318668052,0.004009779082985,Acute Recipients,CH455.PL.012908.UT.5,Acute,,Acute Recipients,Other
+Donor 1,Donor,Transmission,0.02592243415669,2.77751435039361E-05,Chronic Donors,CH492.PL.031108.UT.1,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.243061863793075,0.000275915546974,Chronic Donors,CH492.PL.031108.UT.2,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.035737872675054,2.94284816062397E-05,Chronic Donors,CH492.PL.031108.UT.3,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.046470183647696,2.96043039888754E-05,Chronic Donors,CH492.PL.031108.UT.4,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.072618301360241,2.59039671777266E-05,Chronic Donors,CH492.PL.031108.UT.5,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.41800147842611,0.000145689368011,Chronic Donors,CH492.PL.031108.UT.6,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.277029992811291,2.86542164666285E-05,Chronic Donors,CH492.PL.031108.UT.7,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.105929802411054,0.000248582542574,Chronic Donors,CH492.PL.031108.UT.8,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.089765648268867,3.86953534256479E-05,Chronic Donors,CH492.PL.031108.UT.9,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.016437457063267,9.33657781856191E-05,Chronic Donors,CH492.PL.031108.UT.10,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.305159698284046,7.00304861573905E-05,Chronic Donors,CH492.PL.031108.UT.11,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.730714142013456,4.65776946130552E-05,Chronic Donors,CH492.PL.031108.UT.12,Chronic,,Chronic Donors,Other
+Donor 1,Donor,Transmission,0.029763893917165,0.000107281939171,Chronic Donors,CH492.PL.031108.UT.13,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.161546595272361,4.89915078937126E-05,Chronic Donors,CH596.PL.030408.UT.1,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.02192764196964,3.40973445324388E-05,Chronic Donors,CH596.PL.030408.UT.2,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.242147179707957,5.88639774968775E-05,Chronic Donors,CH596.PL.030408.UT.3,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.084457687514513,4.44303937591874E-05,Chronic Donors,CH596.PL.030408.UT.4,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.202151226614738,6.92522575979845E-05,Chronic Donors,CH596.PL.030408.UT.5,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.028386113244291,0.000211104009919,Chronic Donors,CH596.PL.030408.UT.6,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.165052090586309,3.79252620400482E-05,Chronic Donors,CH596.PL.030408.UT.7,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.075581371452315,6.9833535048183E-05,Chronic Donors,CH596.PL.030408.UT.8,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.201000716839008,0.000384742284297,Chronic Donors,CH596.PL.030408.UT.9,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.03608757199822,2.59216071251405E-05,Chronic Donors,CH596.PL.030408.UT.10,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.092267425723018,3.13506503939001E-05,Chronic Donors,CH596.PL.030408.UT.11,Chronic,,Chronic Donors,Other
+Donor 2,Donor,Transmission,0.130542142343645,0.000213985413747,Chronic Donors,CH596.PL.030408.UT.12,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.240266352405663,7.14257532130079E-05,Chronic Donors,CH728.PL.280708.UT.1,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.032740662068787,0.000231267846593,Chronic Donors,CH728.PL.280708.UT.2,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.072144884796992,3.37812461086593E-05,Chronic Donors,CH728.PL.280708.UT.3,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.010266982886387,2.5915989581218E-05,Chronic Donors,CH728.PL.280708.UT.4,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.21897573164326,0.000110576208324,Chronic Donors,CH728.PL.280708.UT.5,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.260527712743706,0.000208915622898,Chronic Donors,CH728.PL.280708.UT.6,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.312868347641809,0.000612721401712,Chronic Donors,CH728.PL.280708.UT.7,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.040350389039726,8.16984965986649E-05,Chronic Donors,CH728.PL.280708.UT.8,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.097038426953948,0.000111768693577,Chronic Donors,CH728.PL.280708.UT.9,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.033087813981388,4.30870813455829E-05,Chronic Donors,CH728.PL.280708.UT.10,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.087990805221986,0.000231170181491,Chronic Donors,CH728.PL.280708.UT.11,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.26419921392056,0.000132505784542,Chronic Donors,CH728.PL.280708.UT.12,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.087538852856925,8.18524643515123E-05,Chronic Donors,CH728.PL.280708.UT.13,Chronic,,Chronic Donors,Other
+Donor 7,Donor,Transmission,0.026294068355839,0.000254265604471,Chronic Donors,CH728.PL.280708.UT.14,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.311803385363208,0.000308461825811,Chronic Donors,CH742.PL.091008.UT.1,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.211418495271425,0.000571917388729,Chronic Donors,CH742.PL.091008.UT.2,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.071582736032418,0.000183919645755,Chronic Donors,CH742.PL.091008.UT.3,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.369949236035954,0.000257395957379,Chronic Donors,CH742.PL.091008.UT.4,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.098857596505833,2.67375478838573E-05,Chronic Donors,CH742.PL.091008.UT.5,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.030578122539143,8.04420950623411E-05,Chronic Donors,CH742.PL.091008.UT.6,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.02451547680797,2.59130115437029E-05,Chronic Donors,CH742.PL.091008.UT.7,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.192728750832358,0.000630164919567,Chronic Donors,CH742.PL.091008.UT.8,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.043572100122912,0.000133367328166,Chronic Donors,CH742.PL.091008.UT.9,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.100405054934791,0.000562862651472,Chronic Donors,CH742.PL.091008.UT.10,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.27193520336141,0.000420213741631,Chronic Donors,CH742.PL.091008.UT.11,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.031421023158328,2.68982919416794E-05,Chronic Donors,CH742.PL.091008.UT.12,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.27828709713639,0.00067017002332,Chronic Donors,CH742.PL.091008.UT.13,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.010773122539813,2.5923842927891E-05,Chronic Donors,CH742.PL.091008.UT.14,Chronic,,Chronic Donors,Other
+Donor 3,Donor,Transmission,0.09298039481049,0.000821854206713,Chronic Donors,CH742.PL.091008.UT.15,Chronic,,Chronic Donors,Other
+Recipient 3-2,Recipient,Transmission,0.804188207513154,0.003003272036076,Acute Recipients,CH831.PL.111408.UT.1,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.89870685494729,0.003070439728838,Acute Recipients,CH831.PL.111408.UT.2,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.80630842567599,0.003102449429651,Acute Recipients,CH831.PL.111408.UT.3,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.836358616665046,0.003011296285715,Acute Recipients,CH831.PL.111408.UT.4,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.779184333222534,0.002955846463126,Acute Recipients,CH831.PL.111408.UT.5,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.820499928281911,0.00295516112863,Acute Recipients,CH831.PL.111408.UT.6,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.956800111519104,0.002996758082383,Acute Recipients,CH831.PL.111408.UT.7,Acute,,Acute Recipients,Other
+Recipient 3-2,Recipient,Transmission,0.904173804025711,0.002892349433432,Acute Recipients,CH831.PL.111408.UT.8,Acute,,Acute Recipients,Other
+Recipient 6,Recipient,Transmission,0.658566154480603,0.007977733731307,Acute Recipients,CH848.PL.072908.UT.1,Acute,,Acute Recipients,Other
+Recipient 6,Recipient,Transmission,0.809029735636707,0.007969865480532,Acute Recipients,CH848.PL.072908.UT.2,Acute,,Acute Recipients,Other
+Recipient 6,Recipient,Transmission,0.876808240923236,0.007452209005681,Acute Recipients,CH848.PL.072908.UT.3,Acute,,Acute Recipients,Other
+Recipient 6,Recipient,Transmission,0.836645310751782,0.008010676714687,Acute Recipients,CH848.PL.072908.UT.4,Acute,,Acute Recipients,Other
