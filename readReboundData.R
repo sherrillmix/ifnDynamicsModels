@@ -1,7 +1,7 @@
 acuteCut<-30
 chronicCut<-300
 
-dat<-read.csv('out/allLongitudinal.csv',stringsAsFactors=FALSE)
+dat<-read.csv('allLongitudinal.csv',stringsAsFactors=FALSE)
 acuteChronicMM<-dat[dat$qvoa|(dat$time<acuteCut|dat$time>=chronicCut),]
 acuteChronicMM$study<-'MM'
 acuteChronicMM$virus<-acuteChronicMM$id
@@ -21,7 +21,7 @@ acuteChronicMM$infectivity<-acuteChronicMM$p24Release<-NA
 #voa$study<-'MM'
 #voa$virus<-voa$id
 #rebound2<-read.csv('data/Table S4.05.08.2020.csv',stringsAsFactors=FALSE,skip=2)
-rebound2<-read.csv('data/TableS4_071420.csv',stringsAsFactors=FALSE,skip=2)
+rebound2<-read.csv('TableS4_071420.csv',stringsAsFactors=FALSE,skip=2)
 rebound2<-rebound2[!is.na(rebound2$Isolate.ID2)&rebound2$Isolate.ID2!='',]
 rebound2<-rebound2[,!apply(is.na(rebound2),2,all)]
 studyLookup<-c('MNU-0628'='RESERVOIR','NCT00051818'='INTERRUPT','NCT02227277'='IFNa2b treatment','NCT02463227'='VRC01','NCT02588586'='3BNC117','NCT02825797'='3BNC117/10-1074')
@@ -38,7 +38,7 @@ rebound2$infectivity<-NA #rebound2$Infectivity..IU.pg.RT.8
 rebound2$p24Release<-NA #as.numeric(sub('%$','',ifelse(rebound2$p24.Particle.release....9=='',NA,rebound2$p24.Particle.release....9)))/100
 
 
-rebound<-read.csv('data/Data Master 2020_ReboundandQVOA_20200504.csv',stringsAsFactors=FALSE)
+rebound<-read.csv('Data Master 2020_ReboundandQVOA_20200504.csv',stringsAsFactors=FALSE)
 rebound<-rebound[!grepl('_BE$',rebound$ID),]
 table(rebound[!is.na(rebound$ic50_IFNa2),'Study'])
 rebound$study<-sub(' / ','/',rebound$Study)
@@ -49,7 +49,7 @@ rebound[rebound$study=='OUTGROWTH','study']<-'MM'
 rebound$virus<-rebound$ID
 #table(comboA$study)
 
-pair<-read.csv('rebound/donorRecipient.csv',stringsAsFactors=FALSE)
+pair<-read.csv('donorRecipient.csv',stringsAsFactors=FALSE)
 pair$class<-ifelse(pair$donor,'Donor','Recipient')
 pair$type<-'CHAVI cohort'
 #pair$label<-sprintf('CHAVI %s',pair$class)
@@ -81,6 +81,7 @@ fastRegex<-'MM15|WEAU'
 slowRegex<-'MM55|MM62'
 standardRegex<-'MM14|MM23|MM33|MM34|MM39|MM40'
 combined$speed<-ifelse(grepl(fastRegex,combined$virus),'Fast',ifelse(grepl(slowRegex,combined$virus),'Slow',ifelse(grepl(standardRegex,combined$virus),'Standard','Other')))
+write.csv(combined,'combinedReboundQvoa.csv',row.names=FALSE)
 
 
 if(FALSE){
