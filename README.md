@@ -12,7 +12,7 @@ This code should generate analysis result files in the `out` directory. Example 
 ## Changepoint model of IFN resistance with an initial drop and subsequent correlation with CD4 count
 ![Summary of changepoint model of IFN resistance](exampleOut/Fig._3.png)
 
-## Rebound and QVOA IFN resistance
+## IFN resistance of rebound and outgrowth HIV-1 isolates
 ![IFN resistance of acute, chronic, QVOA and rebound HIV-1 isolates](exampleOut/Fig._4.png)
 
 
