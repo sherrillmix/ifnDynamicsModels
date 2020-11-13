@@ -6,6 +6,8 @@ The code depends on the R package `rstan` available from CRAN (`install.packages
 
 This code should generate analysis result files in the `out` directory. Example output is available in the `exampleOut` directory.
 
+In addition, HIV-1 genome sequences without ambiguities are archived on GenBank while genomes with ambiguities (due to amplification from bulk isolates) are archived in [data/TableS5Sequences.fasta](data/TableS5Sequences.fasta).
+
 ## Longitudinal IFN resistance dynamics
 ![Dynamics of HIV-1 IFN resistance in 10 patients](exampleOut/Fig._2.png)
 
