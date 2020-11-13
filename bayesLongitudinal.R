@@ -3,6 +3,7 @@ rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 source('functions.R')
 if(!dir.exists('out'))dir.create('out')
+superTimes<-c(MM14=138,MM15=NA,MM23=204,MM33=40,MM34=NA,MM39=NA,MM40=NA,MM55=NA,MM62=NA,WEAU=NA)
 
 dat<-read.csv('allLongitudinal.csv',stringsAsFactors=FALSE)
 dat$week<-as.integer(round(dat$time/7))
@@ -185,7 +186,7 @@ predIc50<-calcPreds(as.matrix(fit$fit),fit$dat,fit$simDat)
 predIc50B<-calcPreds(as.matrix(fitB$fit),fitB$dat,fitB$simDat)
 
 
-plotPointsLine<-function(dat,ic50,ii,ylab,addTitle=TRUE,sims=NULL,addFit=TRUE,filterAfter=TRUE,artStart=NULL,ylim=range(ic50,na.rm=TRUE)){
+plotPointsLine<-function(dat,ic50,ii,ylab,addTitle=TRUE,sims=NULL,addFit=TRUE,filterAfter=TRUE,artStart=NULL,ylim=range(ic50,na.rm=TRUE),superTimes=NULL){
   plot(dat$time/7,ic50,yaxt='n',log='y',bg=patCols[dat$pat],pch=21,type='n',xlab='',ylab=ylab,xaxt='n',cex=1.4,ylim=ylim)
   if(addTitle)title(ii,line=-1)
   thisDat<-dat[dat$pat==ii,]
@@ -215,33 +216,44 @@ plotPointsLine<-function(dat,ic50,ii,ylab,addTitle=TRUE,sims=NULL,addFit=TRUE,fi
       if(ii!='WEAU'||!filterAfter)abline(v=artStart[ii]/7,lty=2) #MAGIC NUMBER. SUPPRESSING WEAU VERTICAL LINE SINCE DIFFERS FROM OTHERS
     }
   }
-  points(thisDat$time/7,thisIc50,pch=21+thisDat$bulk,bg=c(NA,ifelse(any(!thisDat$bulk&!thisDat$qvoa),'#ffff3399',NA),sprintf('%scc',classCol['qvoa']))[1+thisDat$bulk+2*thisDat$qvoa],cex=1+.2*thisDat$qvoa)
   normCol<-patCols[ii]
-  for(isBulk in sort(unique(thisDat$bulk)))withAs(xx=cbind(thisDat,thisIc50)[thisDat$bulk==isBulk,],points(xx$time/7,xx$thisIc50,pch=21+xx$bulk,bg=c(normCol,ifelse(any(!thisDat$bulk&!thisDat$qvoa),'#ffff33',normCol),sprintf('%s',classCol['qvoa']))[1+xx$bulk+2*xx$qvoa],cex=1+.1*xx$qvoa))
+  for(isBulk in sort(unique(thisDat$bulk)))dnar::withAs(xx=cbind(thisDat,thisIc50)[thisDat$bulk==isBulk,],points(xx$time/7,xx$thisIc50,pch=21+xx$bulk,bg=c(normCol,ifelse(any(!thisDat$bulk&!thisDat$qvoa),normCol,normCol),sprintf('%s',classCol['qvoa']))[1+xx$bulk+2*xx$qvoa],cex=1+.1*xx$qvoa))
+  if(!is.null(superTimes) && !is.na(superTimes[ii])){
+    baseY<-10^(par('usr')[3]+diff(par('usr')[3:4])*.0125)
+    topY<-10^(par('usr')[3]+diff(par('usr')[3:4])*.0675)
+    triWidth<-7
+    segments(rep(superTimes[ii]/7,3)+c(-triWidth,0,triWidth),c(topY,baseY,topY),rep(superTimes[ii]/7,3)+c(0,triWidth,-triWidth),c(baseY,topY,topY),lwd=1.2)
+  }
 }
-plotCondenseIfn<-function(dat,ic50,ylab,showLegend=TRUE,sims=NULL,addFit=TRUE,filterAfter=TRUE,subplotLetters=LETTERS[1:3],artStarts=NULL,ylimExpand=c(1,1)){
+plotCondenseIfn<-function(dat,ic50,ylab,sims=NULL,addFit=TRUE,filterAfter=TRUE,subplotLetters=LETTERS[1:3],subLetterPos=.001,artStarts=NULL,ylimExpand=c(1,1),...){
   par(mar=c(0,0,0,0))
-  layout(lay2,width=c(.42,rep(1,2),.01),height=c(.16,c(1,1,1,.2,1,.2,1),ifelse(showLegend,1.3,.32)))
   counter<-1
   for(ii in patOrder){
-    plotPointsLine(dat,ic50,ii,ylab,sims=sims,addFit=addFit,filterAfter=filterAfter,ylim=range(ic50,na.rm=TRUE)*ylimExpand)
-    if(counter>4)axis(1,seq(0,6,2)*100,cex.axis=1.2,mgp=c(2.75,.4,0),tcl=-.3)
+    plotPointsLine(dat,ic50,ii,ylab,sims=sims,addFit=addFit,filterAfter=filterAfter,ylim=range(ic50,na.rm=TRUE)*ylimExpand,...)
+    if(counter>4)axis(1,seq(0,6,2)*100,cex.axis=1.1,mgp=c(2.75,.4,0),tcl=-.3)
     if(counter>4)axis(1,seq(1:3)*100,rep('',3),cex.axis=1.2,mgp=c(2.75,.7,0),tcl=-.3)
-    if(counter%%2==1)logAxis(2,las=1,cex.axis=1.1,mgp=c(3,.7,0),axisMax=max(ic50,na.rm=TRUE)*1.3)
-    labCex<-1.7
-    if(counter==5)text(par('usr')[1]-.35*diff(par('usr')[1:2]),10^mean(par('usr')[3:4]),ylab,srt=90,xpd=NA,cex=labCex)
-    if(counter==9)text(max(par('usr')[1:2]),10^(par('usr')[3]-.25*diff(par('usr')[3:4])),'Weeks from onset of symptoms',xpd=NA,cex=labCex)
-    if(counter==9&showLegend)legend(par('usr')[1]-diff(par('usr')[1:2])*.3,10^(par('usr')[3]-diff(par('usr')[3:4])*.45),c(ifelse(is.null(sims),'Quadratic regression','Bayesian model'),ifelse(is.null(sims),'95% confidence interval','95% credible interval'),'95% prediction interval','Limiting dilution isolate','Bulk isolate'),col=c(patCols[1],NA,NA,'black','black'),pt.bg=c(NA,patCols2[1],patCols3[1],patCols[1],patCols[1]),lty=c(1,NA,NA,NA,NA),pch=c(NA,22,22,21,22),border=NA,pt.cex=c(3.2,3.2,3.2,1.4,1.4),cex=1.1,xjust=0,yjust=1,xpd=NA)
-    if(counter==1)text(grconvertX(-.29,from='npc'),grconvertY(1.11,from='npc'),subplotLetters[1],xpd=NA,adj=c(0,1),cex=2.5) 
-    if(counter==7)text(grconvertX(-.29,from='npc'),grconvertY(1.13,from='npc'),subplotLetters[2],xpd=NA,adj=c(0,1),cex=2.5)
-    if(counter==9)text(grconvertX(-.29,from='npc'),grconvertY(1.13,from='npc'),subplotLetters[3],xpd=NA,adj=c(0,1),cex=2.5)
+    if(counter%%2==1)logAxis(2,las=1,cex.axis=1.1,mgp=c(3,.5,0),tcl=-.4,axisMax=max(ic50,na.rm=TRUE)*1.3)
+    labCex<-1.4
+    if(counter %in% c(3,7,9))title(ylab=ylab,mgp=c(2.3,1,0),xpd=NA,cex.lab=labCex)#text(par('usr')[1]-.35*diff(par('usr')[1:2]),10^mean(par('usr')[3:4]),ylab,srt=90,xpd=NA,cex=labCex)
+    if(counter %in% c(5,7,9))text(max(par('usr')[1:2]),10^(par('usr')[3]-.195*diff(par('usr')[3:4])),'Weeks from onset of symptoms',xpd=NA,cex=labCex)
+    if(counter==1)text(grconvertX(subLetterPos,from='ndc'),grconvertY(.99,from='nfc'),subplotLetters[1],xpd=NA,adj=c(0,1),cex=2.5) 
+    if(counter==7)text(grconvertX(subLetterPos,from='ndc'),grconvertY(.99,from='nfc'),subplotLetters[2],xpd=NA,adj=c(0,1),cex=2.5)
+    if(counter==9)text(grconvertX(subLetterPos,from='ndc'),grconvertY(.99,from='nfc'),subplotLetters[3],xpd=NA,adj=c(0,1),cex=2.5)
     counter<-counter+1
   }
 }
-pdf('out/bayesFit.pdf',width=3,height=7)
-plotCondenseIfn(dat,dat$ic50,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'),sims=predIc50,filterAfter=TRUE,showLegend=TRUE)
-plotCondenseIfn(dat,dat$beta,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),sims=predIc50B,filterAfter=TRUE,subplotLetters=LETTERS[4:6],showLegend=TRUE,ylimExpand=c(1,2))
+pdf('out/bayesFit.pdf',width=7.3,height=8,useDingbats=FALSE)
+  lay<-matrix(0,nrow=7+2,ncol=4)
+  lay[c(2,3,4,6,8),2:3]<-matrix(1:10,nrow=5,byrow=TRUE)
+  lay2<-lay
+  lay2[lay2>0]<-lay2[lay2>0]+10
+  lay<-cbind(lay,lay2)
+  layout(lay,width=c(.55,rep(1,2),.01,.63,rep(1,2),.01),height=c(.02,c(1,1,1,.3,1,.3,1),.25))
+  plotCondenseIfn(dat,dat$ic50,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'),sims=predIc50,filterAfter=TRUE,superTimes=superTimes)
+  plotCondenseIfn(dat,dat$beta,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),sims=predIc50B,filterAfter=TRUE,subplotLetters=LETTERS[4:6],subLetterPos=.51,ylimExpand=c(1,2),superTimes=superTimes)
 dev.off()
+file.copy('out/bayesFit.pdf','out/Fig._2.pdf',TRUE)
+#system('gs -o out/Fig._2_cmyk.pdf -sDEVICE=pdfwrite -sProcessColorModel=DeviceCMYK -sColorConversionStrategy=CMYK -sColorConversionStrategyForImages=CMYK out/Fig._2.pdf')
 
 
 exampleCurve<-function(fit,type='typical',times=1:600,confInt=.05){
@@ -281,28 +293,7 @@ exampleB<-exampleCurve(fitB$fit,times=times)
 exampleFastB<-exampleCurve(fitB$fit,type='fast',times=times)
 exampleSlowB<-exampleCurve(fitB$fit,type='non',times=times)
 
-plotExample<-function(typical,fast,non,ylab='IFNa2 IC50',dat,ifnCol='ic50',addPat=FALSE){
-  plotSub<-function(example,col,ylim,time=NULL,ic50=NULL,yAxis=TRUE){
-    plot(1,1,type='n',xlim=c(0,85),ylim=ylim,las=1,log='y',yaxt='n',ylab='',xlab='',mgp=c(2.6,.7,0))
-    if(yAxis){
-      logAxis(las=1)
-    }
-    #points(time,ic50,bg=sprintf('%s55',col),cex=.5,pch=21,col='#00000099')
-    polygon(c(times,rev(times))/7,exp(c(example$mean[,'lower'],rev(example$mean[,'upper']))),col=sprintf('%s33',col),border=NA)#,border=sprintf('%s66',col),lty=2)
-    if(addPat)polygon(c(times,rev(times))/7,exp(c(example$pat[,'lower'],rev(example$pat[,'upper']))),col=sprintf('%s33',col),border=NA)#,border=sprintf('%s66',col),lty=3)
-    polygon(c(times,rev(times))/7,exp(c(example$iso[,'lower'],rev(example$iso[,'upper']))),col=sprintf('%s33',col),border=NA)#,border=sprintf('%s11',col))
-    lines(times/7,exp(example$mean[,'mean']),col=col)
-  }
-  withAs(xx=dat[dat$pat %in% c('MM14','MM23','MM33','MM34','MM39','MM40'),],plotSub(typical,classCol['typical'],ylim=exp(range(typical$mean)),time=xx$time/7,ic50=xx[,ifnCol]))
-  title(main='Typical',line=-1)
-  title(ylab=ylab,xpd=NA,mgp=c(2.9,1,0),cex.lab=1.3)
-  withAs(xx=dat[dat$pat %in% c('MM55','MM62'),],plotSub(non,classCol['slow'],ylim=exp(range(typical$mean)),yAxis=FALSE,time=xx$time/7,ic50=xx[,ifnCol]))
-  title(xlab='Weeks from onset of symptoms',mgp=c(2.,.7,0),xpd=NA,cex.lab=1.3)
-  title(main='Non',line=-1)
-  withAs(xx=dat[dat$pat %in% c('MM15','WEAU'),],plotSub(fast,classCol['fast'],ylim=exp(range(typical$mean)),yAxis=FALSE,time=xx$time/7,ic50=xx[,ifnCol]))
-  title(main='Fast',line=-1)
-}
-calcCd4Curve<-function(fit,fakeCd4=seq(-600,500,length.out=200)){
+calcCd4Curve<-function(fit,fakeCd4=seq(-600,1000,length.out=200)){
   mat<-as.matrix(fit$fit)
   nadir<-mat[,grep('acute\\[',colnames(mat))]+mat[,grep('nadirChange\\[',colnames(mat))]
   betas<-mat[,grep('cd4Beta\\[',colnames(mat))]
@@ -346,18 +337,19 @@ nadirCd4s<-apply(ps*fit$dat$cd4Mat,1,sum)*100
 nadirCd4sB<-apply(psB*fit$dat$cd4Mat,1,sum)*100
 names(maxNadirTimes)<-names(nadirCd4s)<-names(fit$pats)
 names(maxNadirTimesB)<-names(nadirCd4sB)<-names(fitB$pats)
-plotCD4<-function(dat,nadirCd4s,nadirTimes,cd4Curves,dayProbs,ic50Col='ic50',ylab='IFNa2 IC50',patCols,addArrows=FALSE){
+plotCD4<-function(dat,nadirCd4s,nadirTimes,cd4Curves,dayProbs,ic50Col='ic50',ylab='IFNa2 IC50',patCols,addArrows=FALSE,axisTicks=c(-400,0,400,800),ylimScale=c(1,3)){
   dat$cd4Diff<-dat$fillCD4-nadirCd4s[dat$pat]
   dat$prob<-apply(dat[,c('pat','time')],1,function(xx)dayProbs[as.character(as.numeric(xx[2])),xx[1]])
-  ylim<-range(dat[dat$prob>.1,ic50Col],na.rm=TRUE)
-  xlim<-range(dat[dat$prob>.1,'cd4Diff'],na.rm=TRUE)
+  probCut<-.05
+  ylim<-range(dat[dat$prob>probCut,ic50Col],na.rm=TRUE)*ylimScale
+  xlim<-range(dat[dat$prob>probCut,'cd4Diff'],na.rm=TRUE)
   par(mar=c(0,0,0,0))
   pats<-patOrder
   for(ii in 1:length(pats)){
-    thisDat<-dat[dat$pat==pats[ii]&!dat$qvoa&dat$prob>.05,]
+    thisDat<-dat[dat$pat==pats[ii]&!dat$qvoa&dat$prob>probCut,]
     plot(1,1,log='y',yaxt='n',xaxt='n',xlim=xlim,ylim=ylim,type='n',xlab='',ylab='')
-    if(ii >8)axis(1)
-    if(ii %% 2==1)logAxis(las=1,axisMin=10^-3)
+    if(ii %in% c(5:10))axis(1,axisTicks,mgp=c(2.5,.4,0),tcl=-.3)
+    if(ii %% 2==1)logAxis(las=1,axisMin=10^-3,tcl=-.4,mgp=c(2,.5,0))
     xx<-data.frame('ic50'=tapply(thisDat[,ic50Col],thisDat$time,function(xx)exp(mean(log(xx),na.rm=TRUE))),
       'cd4'=tapply(thisDat$cd4Diff,thisDat$time,unique),'prob'=tapply(thisDat$prob,thisDat$time,unique))
     xx$time<-as.numeric(rownames(xx))
@@ -369,30 +361,57 @@ plotCD4<-function(dat,nadirCd4s,nadirTimes,cd4Curves,dayProbs,ic50Col='ic50',yla
       polygon(c(thisCurve[,'cd4'],rev(thisCurve[,'cd4'])),c(thisCurve[,'isoLower'],rev(thisCurve[,'isoUpper'])),border=NA,col=sprintf('%s18',patCols[pats[ii]]),lty=2)
     }
     points(thisDat$cd4Diff,thisDat[,ic50Col],pch=21,bg=grey(1-thisDat$prob))#,bg=ifelse(thisDat$afterNadir,patCols[pats[ii]],patCols2[pats[ii]]),col=ifelse(thisDat$afterNadir,'#000000','#00000033'))
-    title(main=pats[ii],line=-1,adj=.1)
+    title(main=pats[ii],line=-1,adj=.5)
     box()
     labCex=1.3
-    if(ii==5)text(par('usr')[1]-.28*diff(par('usr')[1:2]),10^mean(par('usr')[3:4]),ylab,srt=90,xpd=NA,cex=labCex)
-    if(ii==9)text(max(par('usr')[1:2]),10^(par('usr')[3]-.29*diff(par('usr')[3:4])),'Change in CD4 from nadir (cells/ul)',xpd=NA,cex=labCex)
+    #if(ii==5)text(par('usr')[1]-.25*diff(par('usr')[1:2]),10^mean(par('usr')[3:4]),ylab,srt=90,xpd=NA,cex=labCex)
+    if(ii %in% c(3,7,9))title(ylab=ylab,xpd=NA,mgp=c(2.1,1,0),cex.lab=1.3)
+    if(ii %in% c(5,7,9))text(max(par('usr')[1:2]),10^(par('usr')[3]-.26*diff(par('usr')[3:4])),expression(paste('Change in CD4 from nadir (cells/',mu,'l)')),xpd=NA,cex=labCex)
   }
 }
-pdf('out/bayesCombo.pdf',width=8,height=10)
+plotExample<-function(typical,fast,non,ylab='IFNa2 IC50',dat,ifnCol='ic50',addPat=FALSE){
+  plotSub<-function(example,col,ylim,time=NULL,ic50=NULL,yAxis=TRUE){
+    plot(1,1,type='n',xlim=c(0,85),ylim=ylim,las=1,log='y',yaxt='n',ylab='',xlab='',xaxt='n')
+    axis(1,c(0,30,60),mgp=c(2.6,.5,0),tcl=-.4)
+    if(yAxis){
+      logAxis(las=1,tcl=-.4,mgp=c(2,.5,0))
+    }
+    #points(time,ic50,bg=sprintf('%s55',col),cex=.5,pch=21,col='#00000099')
+    polygon(c(times,rev(times))/7,exp(c(example$mean[,'lower'],rev(example$mean[,'upper']))),col=sprintf('%s33',col),border=NA)#,border=sprintf('%s66',col),lty=2)
+    if(addPat)polygon(c(times,rev(times))/7,exp(c(example$pat[,'lower'],rev(example$pat[,'upper']))),col=sprintf('%s33',col),border=NA)#,border=sprintf('%s66',col),lty=3)
+    polygon(c(times,rev(times))/7,exp(c(example$iso[,'lower'],rev(example$iso[,'upper']))),col=sprintf('%s33',col),border=NA)#,border=sprintf('%s11',col))
+    lines(times/7,exp(example$mean[,'mean']),col=col)
+  }
+  withAs(xx=dat[dat$pat %in% c('MM14','MM23','MM33','MM34','MM39','MM40'),],plotSub(typical,classCol['typical'],ylim=exp(range(typical$mean)),time=xx$time/7,ic50=xx[,ifnCol]))
+  title(main='Typical',line=-1)
+  title(ylab=ylab,xpd=NA,mgp=c(2.1,1,0),cex.lab=1.3)
+  withAs(xx=dat[dat$pat %in% c('MM55','MM62'),],plotSub(non,classCol['slow'],ylim=exp(range(typical$mean)),yAxis=FALSE,time=xx$time/7,ic50=xx[,ifnCol]))
+  title(xlab='Weeks from onset of symptoms',mgp=c(1.6,.6,0),xpd=NA,cex.lab=1.3)
+  title(main='Non',line=-1)
+  withAs(xx=dat[dat$pat %in% c('MM15','WEAU'),],plotSub(fast,classCol['fast'],ylim=exp(range(typical$mean)),yAxis=FALSE,time=xx$time/7,ic50=xx[,ifnCol]))
+  title(main='Fast',line=-1)
+}
+pdf('out/bayesCombo.pdf',width=7.3,height=8,useDingbats=FALSE)
   lay1<-matrix(c(0,rep(1:3,each=2),0,rep(4:6,each=2),0),nrow=1)
   lay2<-do.call(rbind,c(list(0),lapply(seq(7,15,2),function(xx)matrix(c(0,rep(xx+0:1,each=3),0,rep(xx+10:11,each=3),0),nrow=1)),list(0)))
-  lay<-rbind(lay1,lay2)
-  layout(lay,height=c(1,.39,rep(1,5),.34),width=c(1,rep(1,6),1.1,rep(1,6),.01))
+  lay2<-rbind(lay2[1:4,],0,lay2[5,],0,lay2[6:nrow(lay2),])
+  lay<-rbind(0,lay1,lay2)
+  layout(lay,height=c(.04,1.1,.45,rep(1,3),.4,1,.4,1,.73),width=c(1.4,rep(1,6),1.6,rep(1,6),.04))
   #drops
   par(mar=c(0,0,0,0))
-  plotExample(example,exampleFast,exampleSlow,dat=dat)
+  plotExample(example,exampleFast,exampleSlow,dat=dat,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'))
   text(grconvertX(.001,from='ndc'),grconvertY(.999,from='ndc'),'A',xpd=NA,adj=c(0,1),cex=2.2)
-  plotExample(exampleB,exampleFastB,exampleSlowB,ylab='IFNb IC50',dat=dat,ifnCol='beta')
-  text(grconvertX(.51,from='ndc'),grconvertY(.999,from='ndc'),'B',xpd=NA,adj=c(0,1),cex=2.2)
-  plotCD4(dat,nadirCd4s,maxNadirTimes,cd4Curve,dayProbs,'ic50',patCols=patCols)
-  text(grconvertX(.51,from='ndc'),grconvertY(.815,from='ndc'),'D',xpd=NA,adj=c(0,1),cex=2.2)
-  plotCD4(dat,nadirCd4sB,maxNadirTimesB,cd4CurveB,dayProbsB,'beta',patCols=patCols,ylab='IFNb IC50')
-  text(grconvertX(.001,from='ndc'),grconvertY(.815,from='ndc'),'C',xpd=NA,adj=c(0,1),cex=2.2)
+  plotExample(exampleB,exampleFastB,exampleSlowB,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),dat=dat,ifnCol='beta')
+  text(grconvertX(.508,from='ndc'),grconvertY(.999,from='ndc'),'B',xpd=NA,adj=c(0,1),cex=2.2)
+  plotCD4(dat,nadirCd4s,maxNadirTimes,cd4Curve,dayProbs,'ic50',patCols=patCols,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'))
+  text(grconvertX(.001,from='ndc'),grconvertY(.808,from='ndc'),'C',xpd=NA,adj=c(0,1),cex=2.2)
+  plotCD4(dat,nadirCd4sB,maxNadirTimesB,cd4CurveB,dayProbsB,'beta',patCols=patCols,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),axisTicks=c(-300,0,300),ylimScale=c(1,5))
+  text(grconvertX(.508,from='ndc'),grconvertY(.808,from='ndc'),'D',xpd=NA,adj=c(0,1),cex=2.2)
+  fakeP<-seq(0,1,.01)
+  insetScale(fakeP,ifelse(fakeP[-1]<.05,'white',grey(1-fakeP[-1])),c(-.6,-1.8,-.5,-.7),main='Estimated probability after nadir',offset=.005,at=c(0,.25,.5,.75,1),cex=1.1)
 dev.off()
-file.copy('out/bayesCombo.pdf','out/Fig._S4.pdf',overwrite=TRUE)
+file.copy('out/bayesCombo.pdf','out/Fig._3.pdf',overwrite=TRUE)
+#system('gs -o out/Fig._3_cmyk.pdf -sDEVICE=pdfwrite -sProcessColorModel=DeviceCMYK -sColorConversionStrategy=CMYK -sColorConversionStrategyForImages=CMYK out/Fig._3.pdf')
 
 
 
