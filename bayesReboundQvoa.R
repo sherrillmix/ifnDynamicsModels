@@ -3,8 +3,9 @@ library(dnar)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 source('functions.R')
+if(!dir.exists('out'))dir.create('out')
 
-combined<-read.csv('combinedReboundQvoa.csv',stringsAsFactors=FALSE)
+combined<-read.csv('data/combinedReboundQvoa.csv',stringsAsFactors=FALSE)
 
 stanCode4_withMixture<-'
   data {

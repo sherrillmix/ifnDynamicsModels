@@ -5,9 +5,9 @@ source('functions.R')
 if(!dir.exists('out'))dir.create('out')
 superTimes<-c(MM14=138,MM15=NA,MM23=204,MM33=40,MM34=NA,MM39=NA,MM40=NA,MM55=NA,MM62=NA,WEAU=NA)
 
-dat<-read.csv('allLongitudinal.csv',stringsAsFactors=FALSE)
+dat<-read.csv('data/allLongitudinal.csv',stringsAsFactors=FALSE)
 dat$week<-as.integer(round(dat$time/7))
-meta<-read.csv('allLongitudinalMeta.csv')
+meta<-read.csv('data/allLongitudinalMeta.csv')
 maxDates<-tapply(meta$time,meta$mm,max)
 artStarts<-tapply(meta$daysBeforeArt+meta$time,meta$mm,unique)
 
@@ -242,7 +242,7 @@ plotCondenseIfn<-function(dat,ic50,ylab,sims=NULL,addFit=TRUE,filterAfter=TRUE,s
     counter<-counter+1
   }
 }
-pdf('out/bayesFit.pdf',width=7.3,height=8,useDingbats=FALSE)
+pdf('out/Fig._2.pdf',width=7.3,height=8,useDingbats=FALSE)
   lay<-matrix(0,nrow=7+2,ncol=4)
   lay[c(2,3,4,6,8),2:3]<-matrix(1:10,nrow=5,byrow=TRUE)
   lay2<-lay
@@ -252,8 +252,6 @@ pdf('out/bayesFit.pdf',width=7.3,height=8,useDingbats=FALSE)
   plotCondenseIfn(dat,dat$ic50,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'),sims=predIc50,filterAfter=TRUE,superTimes=superTimes)
   plotCondenseIfn(dat,dat$beta,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),sims=predIc50B,filterAfter=TRUE,subplotLetters=LETTERS[4:6],subLetterPos=.51,ylimExpand=c(1,2),superTimes=superTimes)
 dev.off()
-file.copy('out/bayesFit.pdf','out/Fig._2.pdf',TRUE)
-#system('gs -o out/Fig._2_cmyk.pdf -sDEVICE=pdfwrite -sProcessColorModel=DeviceCMYK -sColorConversionStrategy=CMYK -sColorConversionStrategyForImages=CMYK out/Fig._2.pdf')
 
 
 exampleCurve<-function(fit,type='typical',times=1:600,confInt=.05){
@@ -391,7 +389,7 @@ plotExample<-function(typical,fast,non,ylab='IFNa2 IC50',dat,ifnCol='ic50',addPa
   withAs(xx=dat[dat$pat %in% c('MM15','WEAU'),],plotSub(fast,classCol['fast'],ylim=exp(range(typical$mean)),yAxis=FALSE,time=xx$time/7,ic50=xx[,ifnCol]))
   title(main='Fast',line=-1)
 }
-pdf('out/bayesCombo.pdf',width=7.3,height=8,useDingbats=FALSE)
+pdf('out/Fig._3.pdf',width=7.3,height=8,useDingbats=FALSE)
   lay1<-matrix(c(0,rep(1:3,each=2),0,rep(4:6,each=2),0),nrow=1)
   lay2<-do.call(rbind,c(list(0),lapply(seq(7,15,2),function(xx)matrix(c(0,rep(xx+0:1,each=3),0,rep(xx+10:11,each=3),0),nrow=1)),list(0)))
   lay2<-rbind(lay2[1:4,],0,lay2[5,],0,lay2[6:nrow(lay2),])
@@ -410,9 +408,6 @@ pdf('out/bayesCombo.pdf',width=7.3,height=8,useDingbats=FALSE)
   fakeP<-seq(0,1,.01)
   insetScale(fakeP,ifelse(fakeP[-1]<.05,'white',grey(1-fakeP[-1])),c(-.6,-1.8,-.5,-.7),main='Estimated probability after nadir',offset=.005,at=c(0,.25,.5,.75,1),cex=1.1)
 dev.off()
-file.copy('out/bayesCombo.pdf','out/Fig._3.pdf',overwrite=TRUE)
-#system('gs -o out/Fig._3_cmyk.pdf -sDEVICE=pdfwrite -sProcessColorModel=DeviceCMYK -sColorConversionStrategy=CMYK -sColorConversionStrategyForImages=CMYK out/Fig._3.pdf')
-
 
 
 
