@@ -8,12 +8,7 @@ patCols<-structure(rep(classCol[c('typical','slow','fast')],c(6,2,2)),.Names=pat
 patCols2<-sprintf('%s44',patCols)
 patCols3<-sprintf('%s22',patCols)
 names(patCols2)<-names(patCols3)<-names(patCols)
-lay<-matrix(0,nrow=7,ncol=4)
-lay[2:6,2:3]<-matrix(1:10,nrow=5,byrow=TRUE)
 
-lay2<-matrix(0,nrow=7+2,ncol=4)
-lay2[c(2,3,4,6,8),2:3]<-matrix(1:10,nrow=5,byrow=TRUE)
-lowerP24Limit<-60
 
 withAs<-function(...,expr=NULL){
   parent<-parent.frame()
@@ -141,3 +136,23 @@ plotQvoa2<-function(ic50,label,pos,class,study,speed,ylab='IFNa2 IC50 (pg/ml)',m
 meanCrI<-function(xx)c(mean(xx,na.rm=TRUE),quantile(xx,c(.025,.975),na.rm=TRUE))
 logsumexp<-function(xx)max(xx)+log(sum(exp(xx-max(xx))))
 softmax<-function(xx)exp(xx-logsumexp(xx))
+
+insetScale<-function(breaks,col,insetPos=c(.025,.015,.04,.25),main='',offset=1e-3,at=NULL,labels=NULL,cex=1,labXOffset=0,labYOffset=0){
+  if(length(breaks)!=length(col)+1)stop('Number of breaks must be one more than colors')
+  insetPos<-c(graphics::grconvertY(insetPos[1],'nfc','user'),graphics::grconvertX(insetPos[2],'nfc','user'),graphics::grconvertY(insetPos[3],'nfc','user'),graphics::grconvertX(insetPos[4],'nfc','user'))
+  breakPos<-((breaks)-(min(breaks)))/max((breaks)-(min(breaks)))*(insetPos[4]-insetPos[2])+insetPos[2]
+  #add a bit of offset to avoid pdf viewers displaying breaks between exact rectangle border meeting
+  offsetPos<-breakPos[-1]+c(rep(offset*diff(range(breakPos)),length(breakPos)-2),0)
+  graphics::rect(breakPos[-length(breakPos)],insetPos[1],offsetPos,insetPos[3],col=col,xpd=NA,border=NA)
+  graphics::rect(insetPos[2],insetPos[1],insetPos[4],insetPos[3],xpd=NA)
+  if(is.null(at)){
+    at<-pretty(breaks)
+    at<-at[at<=max(breaks)&at>=min(breaks)]
+  }
+  if(is.null(labels))labels<-at
+  convertPos<-(at-(min(breaks)))/((max(breaks))-(min(breaks)))*(insetPos[4]-insetPos[2])+insetPos[2]
+  graphics::segments(convertPos,insetPos[1],convertPos,insetPos[1]-diff(insetPos[c(1,3)])*.1,xpd=NA)
+  graphics::text(convertPos+labXOffset*diff(insetPos[c(2,4)]),insetPos[1]-diff(insetPos[c(1,3)])*.175+labYOffset*diff(insetPos[c(1,3)]),labels,xpd=NA,adj=c(.5,1),cex=.85*cex)
+  graphics::text(mean(insetPos[c(2,4)]),insetPos[3]+diff(insetPos[c(1,3)])*.45,main,xpd=NA,adj=c(.5,0),cex=cex)
+  invisible(NULL)
+}
