@@ -4,7 +4,7 @@ To regenerate the analysis, run `source('bayesLongitudinal.R')` and `source('bay
 
 The code depends on the R package `rstan` available from CRAN (`install.packages('rstan')`) and was run in R version 3.4.4 with `rstan` version 2.23. The code can take a fair bit of resources and computational time so a fairly fast server would be best for rerunning.
 
-This code should generate analysis result files in the `out` directory. Example output is available in the `exampleOut` directory.
+This code should generate analysis result files in the `out` directory. Example output is available in the `exampleOut` directory and shown below.
 
 ## Longitudinal IFN resistance dynamics
 ![Dynamics of HIV-1 IFN resistance in 10 patients](exampleOut/Fig._2.png)
