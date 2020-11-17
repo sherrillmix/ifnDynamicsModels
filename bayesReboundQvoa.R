@@ -213,8 +213,8 @@ pdf('out/Fig._5.pdf',height=6,width=7)
   tmp<-combined
   tmp$alphaAdjust<-tmp$ic50_IFNa2/ifelse(tmp$study=='Transmission',alphaAdjust,1)
   tmp$betaAdjust<-tmp$ic50_IFNb/ifelse(tmp$study=='Transmission',betaAdjust,1)
-  plotFunc(tmp,'alphaAdjust',fitA_withMix,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'))
-  plotFunc(tmp,'betaAdjust',fitB_withMix,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),letters=LETTERS[3:4])
+  plotFunc(tmp,'alphaAdjust',fitA_withMix,ylab=expression('IFN'*alpha*'2 IC'[50]*' (pg/ml)'),letters=c('A','C'))
+  plotFunc(tmp,'betaAdjust',fitB_withMix,ylab=expression('IFN'*beta*' IC'[50]*' (pg/ml)'),letters=c('B','D'))
 dev.off()
 
 
