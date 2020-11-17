@@ -7,7 +7,7 @@ if(!dir.exists('out'))dir.create('out')
 
 combined<-read.csv('data/combinedReboundQvoa.csv',stringsAsFactors=FALSE)
 
-stanCode4_withMixture<-'
+stanCodeMix<-'
   data {
     int<lower=0> nVirus;
     int<lower=0> nPatient;
@@ -69,7 +69,7 @@ stanCode4_withMixture<-'
     studyMeansRaw~normal(0,10);
   }
 '
-mod4 <- stan_model(model_code = stanCode4_withMixture)
+mod <- stan_model(model_code = stanCodeMix)
 
 
 if(!exists('fitA_withMix')){
@@ -95,8 +95,8 @@ fitBayes<-function(model,patient,states,studies,treats,ic50,baseState='Acute',mi
   fit <- sampling(model, data = dat, iter=iter, chains=chains,thin=2,control=list(adapt_delta=.99,max_treedepth=15),...)
   return(list('fit'=fit,pats=patientId,states=stateId,studies=studyId,patientStudy=patientStudy,dat=dat))
 }
-fitA_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNa2),],fitBayes(mod4,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNa2,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
-fitB_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNb),],fitBayes(mod4,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNb,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
+fitA_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNa2),],fitBayes(mod,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNa2,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
+fitB_withMix<-withAs(combined=combined[!is.na(combined$ic50_IFNb),],fitBayes(mod,combined$pat,combined$simpleClass,ifelse(combined$study %in% c('Transmission'),combined$study,'Other'),combined$study %in% c('BEAT','IFNa2b treatment'),combined$ic50_IFNb,chains=50,stateId=structure(1:5,.Names=c('Acute','Rebound','Chronic','Outgrowth','Post-ATI')),iter=5000))
 alphaAdjust<-exp(mean(as.matrix(fitA_withMix$fit)[,sprintf('studyMeans[%d]',fitA_withMix$studies['Transmission'])]))
 betaAdjust<-exp(mean(as.matrix(fitB_withMix$fit)[,sprintf('studyMeans[%d]',fitB_withMix$studies['Transmission'])]))
 }
@@ -188,7 +188,7 @@ plotSummary<-function(fit,ylab='IFNa2 IC50 (pg/ml)',mar=c(6.9,4,.1,.1),xWidth=.4
   if(!addAcute)abline(h=1,lty=2)
   return(stateNames)
 }
-pdf('out/voaRebound_bayesSummary.pdf',height=6,width=7)
+pdf('out/Fig._5.pdf',height=6,width=7)
   layout(rbind(1:2,0,3:4),width=c(8,2.2),height=c(1,.01,1))
   #classCols<-structure(c(rep("#9EC0E1E6",3),rep("#77BCA9B3",2), rep("#9FB755B3",2), "#84C47DB3", "#B99A4BB3", "#C77C62B3", "#E581A0E6"), .Names = c("Outgrowth","Pre-ATI","Post-ATI","Acute Recipients","Acute", "Chronic Donors", "Chronic","1 Year", "Nadir", "Last", "Rebound")) 
   classCols<-structure(c(rep(classCol['qvoa'],2),classCol['postQvoa'],rep("#aaaaaa",2), rep("#DDDDDD",2), "#aaaaaa", "#aaaaaa", "#aaaaaa", classCol['rebound'],patCols), .Names = c("Outgrowth","Pre-ATI","Post-ATI","Acute Recipients","Acute", "Chronic Donors", "Chronic","1 Year", "Nadir", "Last", "Rebound",names(patCols))) 

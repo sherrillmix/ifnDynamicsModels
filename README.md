@@ -13,7 +13,7 @@ This code should generate analysis result files in the `out` directory. Example 
 ![Summary of changepoint model of IFN resistance](exampleOut/Fig._3.png)
 
 ## IFN resistance of rebound and outgrowth HIV-1 isolates
-![IFN resistance of acute, chronic, QVOA and rebound HIV-1 isolates](exampleOut/Fig._4.png)
+![IFN resistance of acute, chronic, QVOA and rebound HIV-1 isolates](exampleOut/Fig._5.png)
 
 ## HIV-1 genome sequences with ambiguities
 HIV-1 genome sequences without ambiguities are archived on GenBank while genomes with ambiguities (due to amplification from bulk isolates) are archived in [data/TableS5Sequences.fasta](data/TableS5Sequences.fasta).
